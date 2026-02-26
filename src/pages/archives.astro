@@ -10,38 +10,137 @@ import { url, asset } from '../utils/paths'
       <h1 class="font-heading text-4xl md:text-5xl text-center mb-4">Archives</h1>
       <p class="text-center text-white/60 mb-12 max-w-2xl mx-auto">Toutes les créations de la Compagnie Le Rocher des Doms depuis 1988. Plus de 35 ans de théâtre, de Brecht à Calaferte, de Racine à Labiche.</p>
 
-      <!-- Featured archives -->
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
-        <div class="border border-white/20 p-6">
-          <h3 class="font-heading text-xl text-wheat mb-1">Louise Michel — Louise Maboul</h3>
-          <p class="text-accent text-sm mb-3">2020 — Boyenval & Marmorat</p>
-          <p class="text-white/70 text-sm">Hommage théâtral à Louise Michel. Interprètes : Sylvain Marmorat et Laurence Boyenval.</p>
-        </div>
-        <div class="border border-white/20 p-6">
-          <h3 class="font-heading text-xl text-wheat mb-1">La Fille Bien Gardée</h3>
-          <p class="text-accent text-sm mb-3">Eugène Labiche — Mise en scène : Sylvain Marmorat</p>
-          <p class="text-white/70 text-sm">Cinq comédiens chevronnés et une violoncelliste sur un texte vibrant de Labiche.</p>
-        </div>
-        <div class="border border-white/20 p-6">
-          <h3 class="font-heading text-xl text-wheat mb-1">Poil de Carotte</h3>
-          <p class="text-accent text-sm mb-3">2017 — Jules Renard</p>
-          <p class="text-white/70 text-sm">Adaptation du roman de Jules Renard par la compagnie. Mise en scène : Sylvain Marmorat.</p>
-        </div>
-        <div class="border border-white/20 p-6">
-          <h3 class="font-heading text-xl text-wheat mb-1">Phèdre ~ Epilogue</h3>
-          <p class="text-accent text-sm mb-3">2011 — Adaptation de Racine par Laurence Boyenval</p>
-          <p class="text-white/70 text-sm">Adaptation contemporaine libre de la tragédie de Racine. Direction : Jacques Fornier & Sylvain Marmorat.</p>
-        </div>
-        <div class="border border-white/20 p-6">
-          <h3 class="font-heading text-xl text-wheat mb-1">Fuga #Oratorio#</h3>
-          <p class="text-accent text-sm mb-3">2009 — Jean-Michel Baudoin</p>
-          <p class="text-white/70 text-sm">Deux couples séparés par les différences sociales mais unis par un destin similaire. Mise en scène : Sylvain Marmorat.</p>
-        </div>
-        <div class="border border-white/20 p-6">
-          <h3 class="font-heading text-xl text-wheat mb-1">L'Amante Anglaise</h3>
-          <p class="text-accent text-sm mb-3">2012 — Marguerite Duras</p>
-          <p class="text-white/70 text-sm">Direction : Sylvain Marmorat / Michaël Lonsdale.</p>
-        </div>
+      <!-- Featured archives with images -->
+      <div class="space-y-16 mb-16">
+
+        <!-- Louise Michel -->
+        <article>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
+            <div>
+              <img src={asset('/affiche_logo-scaled.jpg')} alt="Affiche Louise Michel — Louise Maboul" class="w-full" loading="lazy" />
+            </div>
+            <div class="md:col-span-2">
+              <h3 class="font-heading text-2xl text-wheat mb-1">Louise Michel — Louise Maboul</h3>
+              <p class="text-accent text-sm mb-3">2020 — Boyenval & Marmorat</p>
+              <p class="text-white/70 mb-4">Hommage théâtral à Louise Michel. Interprètes : Sylvain Marmorat et Laurence Boyenval.</p>
+              <div class="grid grid-cols-3 gap-2">
+                <img src={asset('/louise-michel-scene-1.jpg')} alt="Louise Michel — Scène" class="w-full aspect-video object-cover" loading="lazy" />
+                <img src={asset('/louise-michel-scene-2.jpg')} alt="Louise Michel — Scène" class="w-full aspect-video object-cover" loading="lazy" />
+                <img src={asset('/img-1161.jpg')} alt="Sylvain Marmorat en répétition" class="w-full aspect-video object-cover" loading="lazy" />
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- La Fille Bien Gardée -->
+        <article>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
+            <div>
+              <img src={asset('/affiche-fille-bien-gardee.gif')} alt="Affiche La Fille Bien Gardée" class="w-full" loading="lazy" />
+            </div>
+            <div class="md:col-span-2">
+              <h3 class="font-heading text-2xl text-wheat mb-1">La Fille Bien Gardée</h3>
+              <p class="text-accent text-sm mb-3">Eugène Labiche — Mise en scène : Sylvain Marmorat</p>
+              <p class="text-white/70 mb-4">Cinq comédiens chevronnés et une violoncelliste sur un texte vibrant de Labiche, dans l'énergie des farces de Molière.</p>
+              <div class="grid grid-cols-2 sm:grid-cols-4 gap-2">
+                <img src={asset('/fille-bien-gardee-scene-1.jpg')} alt="La Fille Bien Gardée — Scène" class="w-full aspect-video object-cover" loading="lazy" />
+                <img src={asset('/fille-bien-gardee-scene-2.jpg')} alt="La Fille Bien Gardée — Scène" class="w-full aspect-video object-cover" loading="lazy" />
+                <img src={asset('/fille-bien-gardee-scene-3.jpg')} alt="La Fille Bien Gardée — Scène" class="w-full aspect-video object-cover" loading="lazy" />
+                <img src={asset('/fille-bien-gardee-scene-4.jpg')} alt="La Fille Bien Gardée — Scène" class="w-full aspect-video object-cover" loading="lazy" />
+              </div>
+              <div class="grid grid-cols-3 gap-2 mt-2">
+                <img src={asset('/fille-bien-gardee-rehearsal-1.jpg')} alt="Répétition La Fille Bien Gardée" class="w-full aspect-video object-cover" loading="lazy" />
+                <img src={asset('/fille-bien-gardee-rehearsal-2.jpg')} alt="Répétition La Fille Bien Gardée" class="w-full aspect-video object-cover" loading="lazy" />
+                <img src={asset('/berthe-et-saint-germain.jpg')} alt="Berthe et Saint-Germain" class="w-full aspect-video object-cover" loading="lazy" />
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Poil de Carotte -->
+        <article>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
+            <div>
+              <img src={asset('/poil-de-carotte-affiche.jpg')} alt="Affiche Poil de Carotte" class="w-full" loading="lazy" />
+            </div>
+            <div class="md:col-span-2">
+              <h3 class="font-heading text-2xl text-wheat mb-1">Poil de Carotte</h3>
+              <p class="text-accent text-sm mb-3">2017 — Jules Renard — Mise en scène : Sylvain Marmorat</p>
+              <p class="text-white/70">Adaptation du roman de Jules Renard par la compagnie.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- L'Histoire d'Amour du Siècle -->
+        <article>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
+            <div>
+              <img src={asset('/histoire-amour-siecle.jpg')} alt="L'Histoire d'Amour du Siècle" class="w-full" loading="lazy" />
+            </div>
+            <div class="md:col-span-2">
+              <h3 class="font-heading text-2xl text-wheat mb-1">L'Histoire d'Amour du Siècle</h3>
+              <p class="text-accent text-sm mb-3">2013 — Marta Tikkanen — Mise en scène : Sylvain Marmorat</p>
+              <p class="text-white/70">Un spectacle poignant porté par Laurence Boyenval.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Phèdre ~ Epilogue -->
+        <article>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
+            <div class="bg-wine-50 aspect-[3/4] flex items-center justify-center">
+              <span class="font-heading text-3xl text-white/20">Phèdre</span>
+            </div>
+            <div class="md:col-span-2">
+              <h3 class="font-heading text-2xl text-wheat mb-1">Phèdre ~ Epilogue</h3>
+              <p class="text-accent text-sm mb-3">2011 — Adaptation de Racine par Laurence Boyenval</p>
+              <p class="text-white/70">Adaptation contemporaine libre de la tragédie de Racine. Direction : Jacques Fornier & Sylvain Marmorat.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Fuga #Oratorio# -->
+        <article>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
+            <div>
+              <img src={asset('/fuga-scene.jpg')} alt="Fuga #Oratorio#" class="w-full" loading="lazy" />
+            </div>
+            <div class="md:col-span-2">
+              <h3 class="font-heading text-2xl text-wheat mb-1">Fuga #Oratorio#</h3>
+              <p class="text-accent text-sm mb-3">2009 — Jean-Michel Baudoin — Mise en scène : Sylvain Marmorat</p>
+              <p class="text-white/70">Deux couples séparés par les différences sociales mais unis par un destin similaire.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Le Nouveau Monde de Pilick -->
+        <article>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
+            <div>
+              <img src={asset('/pilick-affiche.jpg')} alt="Le Nouveau Monde de Pilick" class="w-full" loading="lazy" />
+            </div>
+            <div class="md:col-span-2">
+              <h3 class="font-heading text-2xl text-wheat mb-1">Le Nouveau Monde de Pilick</h3>
+              <p class="text-accent text-sm mb-3">2015 — Annick Terriot — Mise en scène : Sylvain Marmorat</p>
+              <p class="text-white/70">Spectacle jeune public.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- L'Amante Anglaise -->
+        <article>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
+            <div class="bg-wine-50 aspect-[3/4] flex items-center justify-center">
+              <span class="font-heading text-2xl text-white/20 text-center px-4">L'Amante Anglaise</span>
+            </div>
+            <div class="md:col-span-2">
+              <h3 class="font-heading text-2xl text-wheat mb-1">L'Amante Anglaise</h3>
+              <p class="text-accent text-sm mb-3">2012 — Marguerite Duras</p>
+              <p class="text-white/70">Direction : Sylvain Marmorat / Michaël Lonsdale.</p>
+            </div>
+          </div>
+        </article>
+
       </div>
 
       <!-- Full timeline -->
