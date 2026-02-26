@@ -1,0 +1,100 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro'
+import { url, asset } from '../utils/paths'
+---
+
+<BaseLayout title="Actualités — Le Rocher des Doms" description="Les dernières nouvelles de la Compagnie Le Rocher des Doms." currentPage="/actualites">
+
+  <section class="py-16 md:py-24">
+    <div class="max-w-4xl mx-auto px-4">
+      <h1 class="font-heading text-4xl md:text-5xl text-center mb-12">Actualités</h1>
+
+      <div class="space-y-0 divide-y divide-white/10">
+
+        <article class="flex flex-col sm:flex-row gap-6 py-8">
+          <div class="sm:w-40 flex-shrink-0">
+            <img src={asset('/chasseur-dimages-150.jpg')} alt="Le Chasseur d'Images" class="w-full" loading="lazy" />
+          </div>
+          <div>
+            <time class="text-xs uppercase tracking-wider text-white/50">8 juillet 2025</time>
+            <h2 class="font-heading text-xl text-wheat mt-1 mb-2">
+              <a href={url('/spectacles/le-chasseur-dimages')} class="hover:text-accent transition-colors">« Le Chasseur d'Images »</a>
+            </h2>
+            <p class="text-white/70 text-sm">Le 19 juillet à 21h00 à Cohons aux Jardins Remarquables Suspendus. Le 26 juillet à 18h30 à Montigny-sur-Aube — organisé par le Parc National de Forêts.</p>
+          </div>
+        </article>
+
+        <article class="flex flex-col sm:flex-row gap-6 py-8">
+          <div class="sm:w-40 flex-shrink-0">
+            <img src={asset('/ecole-theatre-150.png')} alt="École de Théâtre" class="w-full" loading="lazy" />
+          </div>
+          <div>
+            <time class="text-xs uppercase tracking-wider text-white/50">7 juillet 2025</time>
+            <h2 class="font-heading text-xl text-wheat mt-1 mb-2">
+              <a href={url('/ecole')} class="hover:text-accent transition-colors">Prévoyez votre rentrée à l'École de Théâtre</a>
+            </h2>
+            <p class="text-white/70 text-sm">Une école de théâtre à Talant depuis 1991 avec des cours pour tous les âges dispensés par des comédiens professionnels. Maximum 15 élèves par groupe, pas d'audition préalable. Rentrée le 22 septembre 2025.</p>
+          </div>
+        </article>
+
+        <article class="flex flex-col sm:flex-row gap-6 py-8">
+          <div class="sm:w-40 flex-shrink-0">
+            <img src={asset('/medecin-volant-480.jpg')} alt="Le Médecin Volant" class="w-full" loading="lazy" />
+          </div>
+          <div>
+            <time class="text-xs uppercase tracking-wider text-white/50">7 février 2024</time>
+            <h2 class="font-heading text-xl text-wheat mt-1 mb-2">
+              <a href={url('/spectacles/le-medecin-volant')} class="hover:text-accent transition-colors">Le Médecin Volant de Molière</a>
+            </h2>
+            <p class="text-white/70 text-sm">La vivacité bienveillante de Molière est transposée dans un cadre scénique coloré et contemporain. L'esthétique rappelle les catcheurs et les acrobates de cirque.</p>
+          </div>
+        </article>
+
+        <article class="flex flex-col sm:flex-row gap-6 py-8">
+          <div class="sm:w-40 flex-shrink-0">
+            <img src={asset('/rentree-2023.jpg')} alt="Rentrée 2023" class="w-full" loading="lazy" />
+          </div>
+          <div>
+            <time class="text-xs uppercase tracking-wider text-white/50">20 septembre 2023</time>
+            <h2 class="font-heading text-xl text-wheat mt-1 mb-2">Une rentrée sur les chapeaux de roue</h2>
+            <p class="text-white/70 text-sm">Premier cours pour les collégiens avec Adeline Moncaut. Groupes limités à 10 participants. Réunion d'information adultes : 2 octobre à 19h30, Espace Ménétrier, Talant.</p>
+          </div>
+        </article>
+
+        <article class="flex flex-col sm:flex-row gap-6 py-8">
+          <div class="sm:w-40 flex-shrink-0">
+            <img src={asset('/petit-bonnet-rouge-480.jpg')} alt="Le Petit Bonnet Rouge" class="w-full" loading="lazy" />
+          </div>
+          <div>
+            <time class="text-xs uppercase tracking-wider text-white/50">1 septembre 2023</time>
+            <h2 class="font-heading text-xl text-wheat mt-1 mb-2">
+              <a href={url('/spectacles/le-petit-bonnet-rouge')} class="hover:text-accent transition-colors">Le Petit Bonnet Rouge à Dijon</a>
+            </h2>
+            <p class="text-white/70 text-sm">Quatre représentations au Théâtre des Feuillants les 26 et 27 septembre. Spectacle jeune public à partir de 5 ans. Tarifs : 12€ et 8€.</p>
+          </div>
+        </article>
+
+        <article class="flex flex-col sm:flex-row gap-6 py-8">
+          <div class="sm:w-40 flex-shrink-0">
+            <img src={asset('/photo-spectacle-2023.jpg')} alt="Représentations" class="w-full" loading="lazy" />
+          </div>
+          <div>
+            <time class="text-xs uppercase tracking-wider text-white/50">2 février 2023</time>
+            <h2 class="font-heading text-xl text-wheat mt-1 mb-2">De belles représentations !</h2>
+            <p class="text-white/70 text-sm">« Trois comédiens et deux jeunes danseurs mêlent musique, danse, théâtre et lumière dans une merveilleuse création. »</p>
+          </div>
+        </article>
+
+        <article class="py-8">
+          <div>
+            <time class="text-xs uppercase tracking-wider text-white/50">10 novembre 2020</time>
+            <h2 class="font-heading text-xl text-wheat mt-1 mb-2">Interview de Sylvain Marmorat et Laurence Boyenval</h2>
+            <p class="text-white/70 text-sm">Interview par Clément Privolt au Théâtre des Feuillants. Origines de la compagnie : juin 1988 au Festival d'Avignon. Henri Virlogeux les installe au jardin public du Rocher des Doms. Environ 30 créations. Valeurs : amitié, partage, humilité, humour.</p>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

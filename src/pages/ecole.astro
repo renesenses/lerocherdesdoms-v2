@@ -1,0 +1,90 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro'
+import Hero from '../components/Hero.astro'
+import { url, asset } from '../utils/paths'
+---
+
+<BaseLayout title="École de Théâtre — Le Rocher des Doms" description="École de théâtre à Talant depuis 1991 : cours pour enfants, adolescents et adultes par des comédiens professionnels." currentPage="/ecole">
+
+  <Hero
+    image={asset('/ecole-theatre.png')}
+    title="École de Théâtre"
+    subtitle="À Talant depuis 1991"
+  />
+
+  <section class="py-16 md:py-24">
+    <div class="max-w-4xl mx-auto px-4">
+      <p class="text-lg text-white/80 leading-relaxed mb-12 max-w-2xl">
+        Des cours pour les enfants, les adolescents et les adultes dispensés par des comédiens metteurs en scène professionnels. La compagnie, professionnelle depuis 1988, transmet la passion du théâtre à travers un enseignement rigoureux et bienveillant.
+      </p>
+
+      <!-- Cours -->
+      <div class="space-y-8">
+
+        <div class="border border-white/20 p-8">
+          <h2 class="font-heading text-2xl mb-2">Cours Primaires</h2>
+          <p class="text-accent italic mb-4">Intervenante : Adeline Moncaut — Groupe limité à 10 élèves</p>
+          <div class="flex items-center gap-4 text-white/80">
+            <div class="border-l-3 border-accent pl-4">
+              <p class="font-bold">Jeudi</p>
+              <p class="text-accent">18h00 — 19h30</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="border border-white/20 p-8">
+          <h2 class="font-heading text-2xl mb-2">Cours Collégiens</h2>
+          <p class="text-white/60 italic mb-4">Exercices d'improvisation, travail de textes et mise en scène</p>
+          <div class="flex items-center gap-4 text-white/80">
+            <div class="border-l-3 border-accent pl-4">
+              <p class="font-bold">Lundi</p>
+              <p class="text-accent">18h00 — 19h30</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="border border-white/20 p-8">
+          <h2 class="font-heading text-2xl mb-2">Cours Adultes</h2>
+          <p class="text-white/60 italic mb-4">Tous niveaux, tous types de formation théâtrale — Intervenant : Sylvain Marmorat</p>
+          <p class="text-white/60 text-sm mb-4">18 séances de 3 heures par an</p>
+        </div>
+
+      </div>
+
+      <!-- Infos pratiques -->
+      <div class="bg-wine-80 border border-white/20 p-8 mt-12">
+        <h2 class="font-heading text-2xl mb-4">Informations pratiques</h2>
+        <dl class="space-y-4 text-white/80">
+          <div>
+            <dt class="text-white/50 uppercase tracking-wider text-xs mb-1">Lieu</dt>
+            <dd>Espace Ménétrier, Rue Louis Jouvet, 21240 Talant</dd>
+          </div>
+          <div>
+            <dt class="text-white/50 uppercase tracking-wider text-xs mb-1">Rythme</dt>
+            <dd>24 séances hebdomadaires par an</dd>
+          </div>
+          <div>
+            <dt class="text-white/50 uppercase tracking-wider text-xs mb-1">Effectifs</dt>
+            <dd>Maximum 15 élèves par groupe — Pas d'audition préalable</dd>
+          </div>
+          <div>
+            <dt class="text-white/50 uppercase tracking-wider text-xs mb-1">Tarifs</dt>
+            <dd>Adhésion : 15€ — Inscription annuelle : 210€ à 320€</dd>
+          </div>
+          <div>
+            <dt class="text-white/50 uppercase tracking-wider text-xs mb-1">Contact</dt>
+            <dd>
+              <a href="mailto:cielerocherdesdoms@orange.fr" class="text-accent hover:text-accent-dark">cielerocherdesdoms@orange.fr</a><br />
+              Laurence Boyenval : 06 87 35 45 93 — Sylvain Marmorat : 06 84 12 12 64
+            </dd>
+          </div>
+          <div>
+            <dt class="text-white/50 uppercase tracking-wider text-xs mb-1">Rentrée</dt>
+            <dd>22 septembre 2025</dd>
+          </div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

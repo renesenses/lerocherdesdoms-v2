@@ -1,0 +1,48 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro'
+import { url, asset } from '../utils/paths'
+---
+
+<BaseLayout title="Presse — Le Rocher des Doms" description="Articles de presse sur la Compagnie Le Rocher des Doms." currentPage="/actualites">
+
+  <section class="py-16 md:py-24">
+    <div class="max-w-4xl mx-auto px-4">
+      <h1 class="font-heading text-4xl md:text-5xl text-center mb-12">Articles de Presse</h1>
+
+      <div class="space-y-0 divide-y divide-white/10">
+
+        <article class="py-8">
+          <time class="text-xs uppercase tracking-wider text-white/50">Septembre 2023</time>
+          <h2 class="font-heading text-xl text-wheat mt-1 mb-2">Louise — JHM</h2>
+          <p class="text-white/70 text-sm">Article du Journal de la Haute-Marne sur l'hommage théâtral à Louise Michel par Sylvain Marmorat et Laurence Boyenval à l'Abbaye d'Auberive.</p>
+        </article>
+
+        <article class="py-8">
+          <time class="text-xs uppercase tracking-wider text-white/50">2023</time>
+          <h2 class="font-heading text-xl text-wheat mt-1 mb-2">Un spectacle poignant</h2>
+          <p class="text-white/70 text-sm">Article mentionnant Laurence Boyenval avec « simplicité » et une violoncelliste. Portrait touchant de la compagnie et de son travail.</p>
+        </article>
+
+        <article class="py-8">
+          <time class="text-xs uppercase tracking-wider text-white/50">2019</time>
+          <h2 class="font-heading text-xl text-wheat mt-1 mb-2">Une belle histoire d'amitié depuis 1989</h2>
+          <p class="text-white/70 text-sm">Bel article de Guillaume Malvoisin retraçant l'histoire de la compagnie depuis sa fondation.</p>
+        </article>
+
+        <article class="py-8">
+          <time class="text-xs uppercase tracking-wider text-white/50">Novembre 2019</time>
+          <h2 class="font-heading text-xl text-wheat mt-1 mb-2">JHM — Lecture-spectacle de Lattre à Bourmont</h2>
+          <p class="text-white/70 text-sm">Article du Journal de la Haute-Marne sur la lecture-spectacle dédiée au Maréchal de Lattre.</p>
+        </article>
+
+        <article class="py-8">
+          <time class="text-xs uppercase tracking-wider text-white/50">Août 2019</time>
+          <h2 class="font-heading text-xl text-wheat mt-1 mb-2">JHM — Poil de Carotte à Joinville</h2>
+          <p class="text-white/70 text-sm">Couverture par le Journal de la Haute-Marne de la représentation de Poil de Carotte à Joinville.</p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

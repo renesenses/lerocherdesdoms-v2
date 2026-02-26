@@ -1,0 +1,92 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro'
+import { url, asset } from '../utils/paths'
+---
+
+<BaseLayout title="Contact — Le Rocher des Doms" description="Contactez la Compagnie Le Rocher des Doms. Espace Ménétrier, Talant." currentPage="/contact">
+
+  <section class="py-16 md:py-24">
+    <div class="max-w-5xl mx-auto px-4">
+      <h1 class="font-heading text-4xl md:text-5xl text-center mb-12">Contact</h1>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+
+        <!-- Coordonnées -->
+        <div>
+          <h2 class="font-heading text-2xl mb-6">Coordonnées</h2>
+          <dl class="space-y-6 text-white/80">
+            <div>
+              <dt class="text-white/50 uppercase tracking-wider text-xs mb-1">Adresse</dt>
+              <dd>Compagnie de Théâtre Le Rocher des Doms<br />Espace Ménétrier, Rue Louis Jouvet<br />21240 Talant</dd>
+            </div>
+            <div>
+              <dt class="text-white/50 uppercase tracking-wider text-xs mb-1">Direction artistique</dt>
+              <dd>
+                Sylvain Marmorat : <a href="tel:+33684121264" class="text-accent hover:text-accent-dark">06 84 12 12 64</a><br />
+                <a href="mailto:sylvainmarmorat@orange.fr" class="text-accent hover:text-accent-dark">sylvainmarmorat@orange.fr</a>
+              </dd>
+            </div>
+            <div>
+              <dd>
+                Laurence Boyenval : <a href="tel:+33380582678" class="text-accent hover:text-accent-dark">03 80 58 26 78</a><br />
+                <a href="mailto:cielerocherdesdoms@orange.fr" class="text-accent hover:text-accent-dark">cielerocherdesdoms@orange.fr</a>
+              </dd>
+            </div>
+            <div>
+              <dt class="text-white/50 uppercase tracking-wider text-xs mb-1">Email général</dt>
+              <dd><a href="mailto:cielerocherdesdoms@orange.fr" class="text-accent hover:text-accent-dark">cielerocherdesdoms@orange.fr</a></dd>
+            </div>
+            <div>
+              <dt class="text-white/50 uppercase tracking-wider text-xs mb-1">Réseaux sociaux</dt>
+              <dd><a href="https://www.facebook.com/CieLeRocherDesDoms" target="_blank" rel="noopener noreferrer" class="text-accent hover:text-accent-dark">Facebook — Cie Le Rocher des Doms</a></dd>
+            </div>
+          </dl>
+        </div>
+
+        <!-- Formulaire -->
+        <div>
+          <h2 class="font-heading text-2xl mb-6">Écrivez-nous</h2>
+          <form action="https://formsubmit.co/cielerocherdesdoms@orange.fr" method="POST" class="space-y-4">
+            <input type="hidden" name="_subject" value="Nouveau message — Le Rocher des Doms" />
+            <input type="hidden" name="_captcha" value="true" />
+            <input type="hidden" name="_template" value="table" />
+            <input type="text" name="_honey" style="display:none" />
+
+            <div>
+              <label for="name" class="block text-sm mb-1 text-white/70">Nom complet <span class="text-accent">*</span></label>
+              <input type="text" id="name" name="name" required class="w-full px-4 py-3 bg-transparent border border-white/30 text-white placeholder:text-white/30 focus:border-accent focus:outline-none transition-colors" />
+            </div>
+
+            <div>
+              <label for="email" class="block text-sm mb-1 text-white/70">Email <span class="text-accent">*</span></label>
+              <input type="email" id="email" name="email" required class="w-full px-4 py-3 bg-transparent border border-white/30 text-white placeholder:text-white/30 focus:border-accent focus:outline-none transition-colors" />
+            </div>
+
+            <div>
+              <label for="subject" class="block text-sm mb-1 text-white/70">Sujet</label>
+              <input type="text" id="subject" name="subject" class="w-full px-4 py-3 bg-transparent border border-white/30 text-white placeholder:text-white/30 focus:border-accent focus:outline-none transition-colors" />
+            </div>
+
+            <div>
+              <label for="message" class="block text-sm mb-1 text-white/70">Message <span class="text-accent">*</span></label>
+              <textarea id="message" name="message" rows="6" required class="w-full px-4 py-3 bg-transparent border border-white/30 text-white placeholder:text-white/30 focus:border-accent focus:outline-none transition-colors resize-vertical"></textarea>
+            </div>
+
+            <div>
+              <label class="flex items-start gap-2 text-sm text-white/60 cursor-pointer">
+                <input type="checkbox" name="gdpr" required class="mt-1" />
+                <span>J'accepte que mes données soient traitées conformément à la <a href={url('/confidentialite')} class="text-accent hover:text-accent-dark">politique de confidentialité</a>. <span class="text-accent">*</span></span>
+              </label>
+            </div>
+
+            <button type="submit" class="bg-accent hover:bg-accent-dark text-white uppercase tracking-widest text-sm px-8 py-4 transition-colors">
+              Envoyer
+            </button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

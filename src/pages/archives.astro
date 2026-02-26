@@ -1,0 +1,89 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro'
+import { url, asset } from '../utils/paths'
+---
+
+<BaseLayout title="Archives — Le Rocher des Doms" description="Toutes les créations de la Compagnie Le Rocher des Doms depuis 1988." currentPage="/spectacles">
+
+  <section class="py-16 md:py-24">
+    <div class="max-w-4xl mx-auto px-4">
+      <h1 class="font-heading text-4xl md:text-5xl text-center mb-4">Archives</h1>
+      <p class="text-center text-white/60 mb-12 max-w-2xl mx-auto">Toutes les créations de la Compagnie Le Rocher des Doms depuis 1988. Plus de 35 ans de théâtre, de Brecht à Calaferte, de Racine à Labiche.</p>
+
+      <!-- Featured archives -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
+        <div class="border border-white/20 p-6">
+          <h3 class="font-heading text-xl text-wheat mb-1">Louise Michel — Louise Maboul</h3>
+          <p class="text-accent text-sm mb-3">2020 — Boyenval & Marmorat</p>
+          <p class="text-white/70 text-sm">Hommage théâtral à Louise Michel. Interprètes : Sylvain Marmorat et Laurence Boyenval.</p>
+        </div>
+        <div class="border border-white/20 p-6">
+          <h3 class="font-heading text-xl text-wheat mb-1">La Fille Bien Gardée</h3>
+          <p class="text-accent text-sm mb-3">Eugène Labiche — Mise en scène : Sylvain Marmorat</p>
+          <p class="text-white/70 text-sm">Cinq comédiens chevronnés et une violoncelliste sur un texte vibrant de Labiche.</p>
+        </div>
+        <div class="border border-white/20 p-6">
+          <h3 class="font-heading text-xl text-wheat mb-1">Poil de Carotte</h3>
+          <p class="text-accent text-sm mb-3">2017 — Jules Renard</p>
+          <p class="text-white/70 text-sm">Adaptation du roman de Jules Renard par la compagnie. Mise en scène : Sylvain Marmorat.</p>
+        </div>
+        <div class="border border-white/20 p-6">
+          <h3 class="font-heading text-xl text-wheat mb-1">Phèdre ~ Epilogue</h3>
+          <p class="text-accent text-sm mb-3">2011 — Adaptation de Racine par Laurence Boyenval</p>
+          <p class="text-white/70 text-sm">Adaptation contemporaine libre de la tragédie de Racine. Direction : Jacques Fornier & Sylvain Marmorat.</p>
+        </div>
+        <div class="border border-white/20 p-6">
+          <h3 class="font-heading text-xl text-wheat mb-1">Fuga #Oratorio#</h3>
+          <p class="text-accent text-sm mb-3">2009 — Jean-Michel Baudoin</p>
+          <p class="text-white/70 text-sm">Deux couples séparés par les différences sociales mais unis par un destin similaire. Mise en scène : Sylvain Marmorat.</p>
+        </div>
+        <div class="border border-white/20 p-6">
+          <h3 class="font-heading text-xl text-wheat mb-1">L'Amante Anglaise</h3>
+          <p class="text-accent text-sm mb-3">2012 — Marguerite Duras</p>
+          <p class="text-white/70 text-sm">Direction : Sylvain Marmorat / Michaël Lonsdale.</p>
+        </div>
+      </div>
+
+      <!-- Full timeline -->
+      <h2 class="font-heading text-2xl mb-8 text-center">Répertoire complet</h2>
+      <div class="divide-y divide-white/10">
+        {[
+          { year: '2023', title: 'Le Petit Bonnet Rouge', author: 'Laurence Boyenval' },
+          { year: '2020', title: 'Louise Michel # Louise Maboul', author: 'Boyenval & Marmorat' },
+          { year: '2018', title: "Le Songe d'une Nuit d'été", author: 'Shakespeare' },
+          { year: '2017', title: 'Poil de Carotte', author: 'Jules Renard' },
+          { year: '2016', title: 'La Fille Bien Gardée', author: 'Labiche' },
+          { year: '2015', title: 'Le Nouveau Monde de Pilick', author: 'Annick Terriot' },
+          { year: '2014', title: 'Les Miettes', author: 'Louis Calaferte' },
+          { year: '2013', title: "L'Histoire d'Amour du Siècle", author: 'Marta Tikkanen' },
+          { year: '2012', title: "L'Amante Anglaise", author: 'Marguerite Duras' },
+          { year: '2011', title: 'Phèdre ~ Epilogue', author: 'Racine (adaptation)' },
+          { year: '2010', title: 'Le Médecin Volant', author: 'Molière' },
+          { year: '2009', title: 'Les Derniers Devoirs / Fuga', author: 'Calaferte / Baudoin' },
+          { year: '2008', title: 'Le Siège de Talant / Les Écraignes', author: 'Ghelderode (adapt.)' },
+          { year: '2007', title: 'Britannicus', author: 'Jean Racine' },
+          { year: '2006', title: 'Travaux de territoire / Opéra Bleu', author: 'Louis Calaferte' },
+          { year: '2005', title: 'Clap et Black Out', author: 'Louis Calaferte' },
+          { year: '2003', title: "L'Histoire du Soldat / La Princesse et le Camionneur", author: 'Ramuz / Taffin' },
+          { year: '2001', title: 'Phèdre & Hippolyte / La nuit juste avant les forêts', author: 'Racine / Koltès' },
+          { year: '2000', title: 'Les Sincères / Far-Craf', author: 'Marivaux / Pinter, Ghelderode, Buzzati' },
+          { year: '1999', title: 'La Chasse aux rats / Histoire du Vieux Temps', author: 'Turrini / Maupassant' },
+          { year: '1998', title: "La porte d'Harmonie", author: 'Frédérique Gagnol' },
+          { year: '1997', title: 'Baudelaire Nadar', author: 'Doride Salti' },
+          { year: '1994', title: "L'Amour en Visites", author: 'Alfred Jarry' },
+          { year: '1991', title: 'Théodore / M. Badin / Pedro et le Capitaine', author: 'Courteline / Benedetti' },
+          { year: '1990', title: "En ville, il y a une fête", author: 'Brecht, Schiller' },
+          { year: '1989', title: 'La surface de réparation', author: 'Raymond Dutherque' },
+          { year: '1988', title: 'Le mendiant ou le chien mort', author: 'Brecht' },
+        ].map(item => (
+          <div class="flex items-baseline gap-4 py-3">
+            <span class="text-accent font-bold min-w-[3rem]">{item.year}</span>
+            <span class="text-wheat">{item.title}</span>
+            <span class="text-white/40 text-sm ml-auto hidden sm:block">{item.author}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

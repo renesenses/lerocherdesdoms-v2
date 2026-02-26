@@ -1,0 +1,98 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro'
+import Hero from '../components/Hero.astro'
+import { url, asset } from '../utils/paths'
+---
+
+<BaseLayout title="La Compagnie — Le Rocher des Doms" description="Découvrez l'histoire et l'équipe de la Compagnie Le Rocher des Doms, troupe de théâtre professionnelle depuis 1988." currentPage="/compagnie">
+
+  <Hero
+    image={asset('/photo-equipe-ecrin.jpg')}
+    title="La Compagnie"
+    subtitle="Création, diffusion et enseignement du théâtre depuis 1988"
+  />
+
+  <!-- Histoire -->
+  <section class="py-16 md:py-24">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="font-heading text-3xl md:text-4xl mb-8">Notre histoire</h2>
+      <div class="prose-custom space-y-6 text-white/80 leading-relaxed">
+        <p>Compagnie de théâtre professionnelle, Le Rocher des Doms crée, diffuse et enseigne le théâtre. Elle rassemble autour d'elle des individus qui consacrent sur le long terme leur énergie au développement du projet artistique de la compagnie.</p>
+        <p>Elle n'a de cesse de crier sa volonté de grandir, de manifester son désir d'accueillir et d'ouvrir ses portes au gré des relations humaines, pour toujours revenir à cet « essentiel du partage » que nous inculque le théâtre.</p>
+        <p>Fondée en juin 1988 au Festival d'Avignon, installée par Henri Virlogeux au jardin public du Rocher des Doms, la troupe s'est ensuite établie à Châtillon-sur-Seine (1989) puis à Talant (1991). Plus de 35 ans de création théâtrale, de Brecht à Calaferte, de Racine à Labiche, portés par une troupe passionnée.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- La Troupe -->
+  <section class="bg-wine-80 py-16 md:py-24">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="font-heading text-3xl md:text-4xl mb-12 text-center">La Troupe</h2>
+
+      <!-- Sylvain Marmorat -->
+      <article class="mb-16">
+        <div class="sm:flex gap-8 mb-6">
+          <img src={asset('/photo-jcc.jpg')} alt="Sylvain Marmorat" class="w-48 h-48 object-cover rounded flex-shrink-0 mb-4 sm:mb-0" loading="lazy" />
+          <div>
+            <h3 class="font-heading text-2xl mb-1">Sylvain Marmorat</h3>
+            <p class="text-accent italic mb-4">Directeur Artistique — Comédien, Metteur en scène</p>
+            <p class="text-white/80 leading-relaxed">Découvre le théâtre au collège de Châtillon-sur-Seine, il entre aux Cours Florent à Paris, puis se forme au Joueur Regardé pendant 4 ans. Début professionnel en 1984 dans le rôle de Chérubin dans « Le Mariage de Figaro » au Théâtre de Metz. Fonde la compagnie en 1988 au Rocher des Doms à Avignon. Collabore avec Michaël Lonsdale de 1989 à 2012.</p>
+          </div>
+        </div>
+        <div class="mt-6">
+          <h4 class="font-heading text-lg text-accent mb-3">Productions marquantes</h4>
+          <ul class="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-1 text-sm text-white/70">
+            <li class="py-1 border-b border-white/10"><span class="font-bold text-white/50 mr-2">2023</span> Le Petit Bonnet Rouge</li>
+            <li class="py-1 border-b border-white/10"><span class="font-bold text-white/50 mr-2">2020</span> Louise Michel # Louise Maboul</li>
+            <li class="py-1 border-b border-white/10"><span class="font-bold text-white/50 mr-2">2018</span> Le Songe d'une Nuit d'été</li>
+            <li class="py-1 border-b border-white/10"><span class="font-bold text-white/50 mr-2">2017</span> Poil de Carotte</li>
+            <li class="py-1 border-b border-white/10"><span class="font-bold text-white/50 mr-2">2016</span> La Fille Bien Gardée</li>
+            <li class="py-1 border-b border-white/10"><span class="font-bold text-white/50 mr-2">2012</span> L'Amante Anglaise</li>
+            <li class="py-1 border-b border-white/10"><span class="font-bold text-white/50 mr-2">2011</span> Phèdre ~ Epilogue</li>
+            <li class="py-1 border-b border-white/10"><span class="font-bold text-white/50 mr-2">2010</span> Le Médecin Volant</li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- Laurence Boyenval -->
+      <article class="mb-16">
+        <div class="sm:flex gap-8 mb-6">
+          <img src={asset('/laurence-boyenval.jpg')} alt="Laurence Boyenval" class="w-48 h-48 object-cover rounded flex-shrink-0 mb-4 sm:mb-0" loading="lazy" />
+          <div>
+            <h3 class="font-heading text-2xl mb-1">Laurence Boyenval</h3>
+            <p class="text-accent italic mb-4">Directrice Artistique — Comédienne, Autrice, Pédagogue</p>
+            <p class="text-white/80 leading-relaxed">Quitte son pays à 18 ans pour des études internationales. À 33 ans, abandonne une carrière dans les affaires pour le théâtre. Formée au Grenier de Bourgogne sous Jean Maisonnave. Découverte par François Jacob pour « La Chasse aux Rats » de Peter Turrini. Rejoint Le Rocher des Doms et collabore avec Michaël Lonsdale et Jacques Fornier pendant 20 ans.</p>
+          </div>
+        </div>
+        <div class="mt-6">
+          <h4 class="font-heading text-lg text-accent mb-3">Productions marquantes</h4>
+          <ul class="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-1 text-sm text-white/70">
+            <li class="py-1 border-b border-white/10"><span class="font-bold text-white/50 mr-2">2023</span> Le Petit Bonnet Rouge (écriture, mise en scène)</li>
+            <li class="py-1 border-b border-white/10"><span class="font-bold text-white/50 mr-2">2020</span> Louise Michel # Louise Maboul</li>
+            <li class="py-1 border-b border-white/10"><span class="font-bold text-white/50 mr-2">2018</span> Le Songe d'une Nuit d'été</li>
+            <li class="py-1 border-b border-white/10"><span class="font-bold text-white/50 mr-2">2017</span> Poil de Carotte</li>
+            <li class="py-1 border-b border-white/10"><span class="font-bold text-white/50 mr-2">2016</span> La Fille Bien Gardée</li>
+            <li class="py-1 border-b border-white/10"><span class="font-bold text-white/50 mr-2">2012</span> L'Amante Anglaise</li>
+            <li class="py-1 border-b border-white/10"><span class="font-bold text-white/50 mr-2">2011</span> Phèdre ~ Epilogue</li>
+            <li class="py-1 border-b border-white/10"><span class="font-bold text-white/50 mr-2">2010</span> Le Médecin Volant</li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- Adeline Moncaut -->
+      <article>
+        <div class="sm:flex gap-8 mb-6">
+          <div class="w-48 h-48 bg-wine-50 rounded flex-shrink-0 flex items-center justify-center mb-4 sm:mb-0">
+            <span class="font-heading text-4xl text-white/20">AM</span>
+          </div>
+          <div>
+            <h3 class="font-heading text-2xl mb-1">Adeline Moncaut</h3>
+            <p class="text-accent italic mb-4">Comédienne et Pédagogue</p>
+            <p class="text-white/80 leading-relaxed">Débute sa carrière professionnelle à 13 ans (1984) au Grenier de Bourgogne sous Jean Maisonnave. Productions notables : « Vue du Pont » d'Arthur Miller (1989), « La Nuit des Rois » de Shakespeare (1994). Obtient le D.U.M.S.T. à l'Université de Besançon. Parcours international à Stockholm et en Suisse. Rejoint Le Rocher des Doms en 2016. Enseigne le théâtre à l'école de Talant.</p>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+</BaseLayout>

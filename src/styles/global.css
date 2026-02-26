@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+/* === Custom theme === */
+@theme {
+  --color-accent: #dd5500;
+  --color-accent-dark: #bb4400;
+  --color-wine: rgb(36, 14, 16);
+  --color-wine-50: rgba(36, 14, 16, 0.5);
+  --color-wine-80: rgba(36, 14, 16, 0.8);
+  --color-wine-95: rgba(36, 14, 16, 0.95);
+  --color-wheat: wheat;
+
+  --font-heading: 'Playfair Display SC', serif;
+  --font-body: 'Varela', sans-serif;
+}
+
+/* === Base styles === */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: var(--font-body);
+    color: #fff;
+    background-color: var(--color-wine);
+    line-height: 1.7;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    font-weight: 400;
+    line-height: 1.2;
+  }
+
+  a {
+    color: var(--color-accent);
+    text-decoration: none;
+    transition: color 0.15s ease-out;
+  }
+
+  a:hover {
+    color: var(--color-accent-dark);
+  }
+
+  ::selection {
+    background: rgb(53, 53, 53);
+    color: antiquewhite;
+  }
+}

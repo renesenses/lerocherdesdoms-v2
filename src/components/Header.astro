@@ -1,0 +1,72 @@
+---
+import { url, asset } from '../utils/paths'
+
+interface Props {
+  currentPage?: string
+}
+
+const { currentPage = '' } = Astro.props
+
+const navItems = [
+  { label: 'Accueil', href: '/' },
+  { label: 'La Compagnie', href: '/compagnie' },
+  { label: 'Spectacles', href: '/spectacles' },
+  { label: 'École de Théâtre', href: '/ecole' },
+  { label: 'Calendrier', href: '/calendrier' },
+  { label: 'Actualités', href: '/actualites' },
+  { label: 'Contact', href: '/contact' },
+]
+---
+
+<header class="relative z-50">
+  <!-- Logo -->
+  <div class="py-6">
+    <div class="max-w-6xl mx-auto px-4">
+      <a href={url('/')} class="block max-w-3xl mx-auto">
+        <img src={asset('/logo.png')} alt="Compagnie Le Rocher des Doms" class="w-full" />
+      </a>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="bg-wine-50 backdrop-blur-sm border-y border-white/10" role="navigation" aria-label="Navigation principale">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex items-center justify-between py-3 lg:py-0">
+        <!-- Hamburger -->
+        <button
+          id="hamburger"
+          class="lg:hidden flex flex-col gap-1.5 p-2 text-white"
+          aria-label="Ouvrir le menu"
+          aria-expanded="false"
+          aria-controls="nav-menu"
+        >
+          <span class="block w-6 h-0.5 bg-current"></span>
+          <span class="block w-6 h-0.5 bg-current"></span>
+          <span class="block w-6 h-0.5 bg-current"></span>
+        </button>
+
+        <!-- Nav links -->
+        <ul
+          id="nav-menu"
+          class="hidden lg:flex items-center justify-center w-full gap-0 font-heading text-sm tracking-wide"
+        >
+          {navItems.map((item, i) => (
+            <li class="flex items-center">
+              {i > 0 && <span class="text-white/40 mx-3 hidden lg:inline" aria-hidden="true">&middot;</span>}
+              <a
+                href={url(item.href)}
+                class:list={[
+                  'block py-4 lg:py-5 px-2 transition-colors hover:text-accent',
+                  currentPage === item.href ? 'text-accent' : 'text-white',
+                ]}
+                aria-current={currentPage === item.href ? 'page' : undefined}
+              >
+                {item.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>

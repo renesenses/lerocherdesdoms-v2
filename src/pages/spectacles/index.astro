@@ -1,0 +1,54 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro'
+import SectionTitle from '../../components/SectionTitle.astro'
+import SpectacleCard from '../../components/SpectacleCard.astro'
+import { url, asset } from '../../utils/paths'
+---
+
+<BaseLayout title="Spectacles — Le Rocher des Doms" description="Découvrez les spectacles en tournée de la Compagnie Le Rocher des Doms." currentPage="/spectacles">
+
+  <section class="py-16 md:py-24">
+    <div class="max-w-6xl mx-auto px-4">
+      <SectionTitle>Spectacles en tournée</SectionTitle>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <SpectacleCard
+          title="Le Souper"
+          image={asset('/le-souper-480.jpg')}
+          href={url('/spectacles/le-souper')}
+          excerpt="De Jean-Claude Brisville. Le face-à-face historique entre Fouché et Talleyrand, le soir de Waterloo."
+        />
+        <SpectacleCard
+          title="Le Chasseur d'Images"
+          image={asset('/chasseur-dimages-480.jpg')}
+          href={url('/spectacles/le-chasseur-dimages')}
+          excerpt="Texte et mise en scène : Laurence Boyenval. Deux personnages de générations différentes se retrouvent en forêt au fil des saisons."
+        />
+        <SpectacleCard
+          title="Le Petit Bonnet Rouge"
+          image={asset('/petit-bonnet-rouge-480.jpg')}
+          href={url('/spectacles/le-petit-bonnet-rouge')}
+          excerpt="Spectacle théâtral et dansé, mêlant théâtre, danse et musique. Tout public à partir de 5 ans."
+        />
+        <SpectacleCard
+          title="Le Médecin Volant"
+          image={asset('/medecin-volant-480.jpg')}
+          href={url('/spectacles/le-medecin-volant')}
+          excerpt="De Molière, mise en scène Pierre Yanelli. La vivacité bienveillante de Molière dans un cadre contemporain."
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- Archives link -->
+  <section class="bg-wine-80 py-16">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <h2 class="font-heading text-3xl mb-4">Archives</h2>
+      <p class="text-white/70 mb-8">Plus de 35 ans de création théâtrale, de Brecht à Calaferte, de Racine à Labiche.</p>
+      <a href={url('/archives')} class="inline-block border border-white/30 hover:border-accent text-white hover:text-accent font-heading uppercase tracking-widest text-sm px-8 py-3 transition-colors">
+        Voir toutes les archives
+      </a>
+    </div>
+  </section>
+
+</BaseLayout>

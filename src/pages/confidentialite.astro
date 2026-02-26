@@ -1,0 +1,51 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro'
+import { url, asset } from '../utils/paths'
+---
+
+<BaseLayout title="Politique de confidentialité — Le Rocher des Doms" currentPage="">
+
+  <section class="py-16 md:py-24">
+    <div class="max-w-3xl mx-auto px-4">
+      <h1 class="font-heading text-4xl md:text-5xl text-center mb-12">Politique de confidentialité</h1>
+
+      <div class="space-y-8 text-white/80 leading-relaxed text-sm">
+
+        <div>
+          <h2 class="font-heading text-xl text-white mb-3">Collecte des données</h2>
+          <p>La Compagnie Le Rocher des Doms collecte des informations lorsque les visiteurs utilisent le site. Ces informations comprennent les adresses IP, les détails du fournisseur internet et les URL de provenance. Ces données sont collectées pour l'organisation de la relation commerciale et les intérêts légitimes du responsable du traitement.</p>
+          <p class="mt-2">Les informations personnelles ne sont jamais publiées, échangées, transférées ou vendues à des tiers sans consentement.</p>
+        </div>
+
+        <div>
+          <h2 class="font-heading text-xl text-white mb-3">Droits des utilisateurs</h2>
+          <p>Conformément au RGPD 2016/679, toute personne peut demander l'accès, la rectification, la suppression ou l'opposition au traitement de ses données personnelles.</p>
+          <p class="mt-2">Les demandes peuvent être soumises via la <a href={url('/contact')} class="text-accent hover:text-accent-dark">page de contact</a> ou par courrier à : La Compagnie Le Rocher des Doms, 11 Rue Condorcet, 21000 Dijon. Les demandes doivent inclure une copie de pièce d'identité.</p>
+          <p class="mt-2">Les réclamations non résolues peuvent être adressées à la CNIL.</p>
+        </div>
+
+        <div>
+          <h2 class="font-heading text-xl text-white mb-3">Conservation et destinataires</h2>
+          <p>Les données personnelles ne sont conservées que le temps nécessaire aux finalités annoncées. L'accès est limité à l'organisation et au personnel autorisé. Les prestataires tiers (hébergement, logistique) ne reçoivent que les données nécessaires sous accord de confidentialité strict.</p>
+        </div>
+
+        <div>
+          <h2 class="font-heading text-xl text-white mb-3">Sécurité</h2>
+          <p>L'organisation met en œuvre des mesures techniques et organisationnelles adaptées aux risques du traitement. Les données en ligne sont protégées par chiffrement SSL.</p>
+        </div>
+
+        <div>
+          <h2 class="font-heading text-xl text-white mb-3">Cookies</h2>
+          <p>Ce site utilise des cookies fonctionnels (personnalisation de l'expérience utilisateur) et analytiques (amélioration des performances). Les utilisateurs peuvent configurer leur navigateur pour accepter, refuser ou être alertés lors de la réception de cookies. Le refus de cookies peut limiter certaines fonctionnalités.</p>
+        </div>
+
+        <div>
+          <h2 class="font-heading text-xl text-white mb-3">Droit applicable</h2>
+          <p>Les litiges sont soumis au droit français et entendus par les tribunaux du siège de la compagnie. Références : Loi n° 78-17 du 6 janvier 1978, Directive européenne 95/46/CE, RGPD 2016/679.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

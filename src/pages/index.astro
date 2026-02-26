@@ -1,0 +1,139 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro'
+import Hero from '../components/Hero.astro'
+import SectionTitle from '../components/SectionTitle.astro'
+import SpectacleCard from '../components/SpectacleCard.astro'
+import { url, asset } from '../utils/paths'
+---
+
+<BaseLayout title="Compagnie de théâtre Le Rocher des Doms" currentPage="/">
+
+  <!-- Hero -->
+  <Hero
+    image={asset('/chasseur-dimages.jpg')}
+    title="Le Chasseur d'Images"
+    subtitle="En tournée — Découvrez notre dernière création"
+    ctaLabel="Voir les prochaines dates"
+    ctaHref={url('/calendrier')}
+  />
+
+  <!-- Spectacles en tournée -->
+  <section class="py-16 md:py-24">
+    <div class="max-w-6xl mx-auto px-4">
+      <SectionTitle>Spectacles en tournée</SectionTitle>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <SpectacleCard
+          title="Le Chasseur d'Images"
+          image={asset('/chasseur-dimages-480.jpg')}
+          href={url('/spectacles/le-chasseur-dimages')}
+          excerpt="D'après la nouvelle d'Albert Lonsdale. Un photographe confronté aux mystères de ses propres clichés."
+        />
+        <SpectacleCard
+          title="Le Souper"
+          image={asset('/le-souper-480.jpg')}
+          href={url('/spectacles/le-souper')}
+          excerpt="De Jean-Claude Brisville. Le face-à-face historique entre Fouché et Talleyrand."
+        />
+        <SpectacleCard
+          title="Le Petit Bonnet Rouge"
+          image={asset('/petit-bonnet-rouge-480.jpg')}
+          href={url('/spectacles/le-petit-bonnet-rouge')}
+          excerpt="Un conte revisité pour le jeune public, plein de couleurs et de surprises."
+        />
+        <SpectacleCard
+          title="Le Médecin Volant"
+          image={asset('/medecin-volant-480.jpg')}
+          href={url('/spectacles/le-medecin-volant')}
+          excerpt="De Molière. La vivacité bienveillante de Molière dans un cadre contemporain."
+        />
+      </div>
+      <div class="text-center mt-10">
+        <a href={url('/spectacles')} class="inline-block border border-white/30 hover:border-accent text-white hover:text-accent font-heading uppercase tracking-widest text-sm px-8 py-3 transition-colors">
+          Tous les spectacles
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- À propos -->
+  <section class="bg-wine-80 py-16 md:py-24">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <img src={asset('/atelier-affiche.jpg')} alt="La compagnie en répétition" class="w-full" loading="lazy" />
+        </div>
+        <div>
+          <h2 class="font-heading text-3xl md:text-4xl mb-6">La Compagnie</h2>
+          <p class="text-white/80 mb-6 leading-relaxed">
+            Compagnie de théâtre professionnelle, Le Rocher des Doms crée, diffuse et enseigne le théâtre depuis 1988. Elle rassemble autour d'elle des individus qui consacrent sur le long terme leur énergie au développement du projet artistique de la compagnie.
+          </p>
+          <p class="text-white/80 mb-8 leading-relaxed">
+            Elle n'a de cesse de crier sa volonté de grandir, de manifester son désir d'accueillir et d'ouvrir ses portes au gré des relations humaines, pour toujours revenir à cet « essentiel du partage » que nous inculque le théâtre.
+          </p>
+          <a href={url('/compagnie')} class="inline-block border border-white/30 hover:border-accent text-white hover:text-accent font-heading uppercase tracking-widest text-sm px-8 py-3 transition-colors">
+            Découvrir la troupe
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Prochaines dates -->
+  <section class="py-16 md:py-24">
+    <div class="max-w-4xl mx-auto px-4">
+      <SectionTitle>Prochaines dates</SectionTitle>
+      <div class="space-y-0 divide-y divide-white/10">
+        <a href={url('/spectacles/le-chasseur-dimages')} class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-6 py-5 group">
+          <span class="text-accent font-bold whitespace-nowrap text-lg">19 Juil. 2025</span>
+          <span class="font-heading text-lg text-wheat group-hover:text-accent transition-colors">« Le Chasseur d'Images »</span>
+          <span class="text-white/50 text-sm sm:ml-auto">Cohons — Jardins Remarquables Suspendus, 21h00</span>
+        </a>
+        <a href={url('/spectacles/le-chasseur-dimages')} class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-6 py-5 group">
+          <span class="text-accent font-bold whitespace-nowrap text-lg">26 Juil. 2025</span>
+          <span class="font-heading text-lg text-wheat group-hover:text-accent transition-colors">« Le Chasseur d'Images »</span>
+          <span class="text-white/50 text-sm sm:ml-auto">Montigny-sur-Aube — Parc National de Forêts, 18h30</span>
+        </a>
+      </div>
+      <div class="text-center mt-10">
+        <a href={url('/calendrier')} class="inline-block bg-accent hover:bg-accent-dark text-white font-heading uppercase tracking-widest text-sm px-8 py-4 transition-colors">
+          Tout le calendrier
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- École de Théâtre -->
+  <section class="bg-wine-80 py-16 md:py-24">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div class="order-2 lg:order-1">
+          <h2 class="font-heading text-3xl md:text-4xl mb-6">École de Théâtre</h2>
+          <p class="text-white/80 mb-4 leading-relaxed">
+            Une école de théâtre à Talant depuis 1991 : des cours pour les enfants, les adolescents et les adultes dispensés par des comédiens metteurs en scène professionnels.
+          </p>
+          <ul class="space-y-3 mb-8">
+            <li class="flex items-start gap-3">
+              <span class="text-accent mt-1">&#9654;</span>
+              <span class="text-white/80">Cours enfants — Mercredi 14h-15h30</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-accent mt-1">&#9654;</span>
+              <span class="text-white/80">Cours adolescents — Mercredi 15h30-17h</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-accent mt-1">&#9654;</span>
+              <span class="text-white/80">Cours adultes — Lundi 20h-22h</span>
+            </li>
+          </ul>
+          <a href={url('/ecole')} class="inline-block bg-accent hover:bg-accent-dark text-white font-heading uppercase tracking-widest text-sm px-8 py-4 transition-colors">
+            S'inscrire aux ateliers
+          </a>
+        </div>
+        <div class="order-1 lg:order-2">
+          <img src={asset('/ecole-theatre.png')} alt="École de Théâtre de Talant" class="w-full" loading="lazy" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

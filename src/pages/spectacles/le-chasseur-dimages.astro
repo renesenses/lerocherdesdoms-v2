@@ -1,0 +1,74 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro'
+import Hero from '../../components/Hero.astro'
+import { url, asset } from '../../utils/paths'
+---
+
+<BaseLayout title="Le Chasseur d'Images — Le Rocher des Doms" description="Texte et mise en scène de Laurence Boyenval. Deux personnages de générations différentes se retrouvent en forêt au fil des saisons." currentPage="/spectacles">
+
+  <Hero
+    image={asset('/chasseur-dimages.jpg')}
+    title="Le Chasseur d'Images"
+  />
+
+  <section class="py-16 md:py-24">
+    <div class="max-w-4xl mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+        <div class="md:col-span-2 space-y-6 text-white/80 leading-relaxed">
+          <p>Deux personnages de générations différentes se retrouvent en forêt au fil des saisons. Un spectacle mêlant théâtre, danse, ombres chinoises et masques sur des musiques classiques.</p>
+          <p>D'après la nouvelle d'Albert Lonsdale. Texte et mise en scène : Laurence Boyenval.</p>
+        </div>
+        <aside class="space-y-4">
+          <div class="border border-white/20 p-6">
+            <h3 class="font-heading text-lg mb-4">Informations</h3>
+            <dl class="space-y-3 text-sm">
+              <div>
+                <dt class="text-white/50 uppercase tracking-wider text-xs">Texte & mise en scène</dt>
+                <dd>Laurence Boyenval</dd>
+              </div>
+              <div>
+                <dt class="text-white/50 uppercase tracking-wider text-xs">Genre</dt>
+                <dd>Théâtre, danse, ombres chinoises</dd>
+              </div>
+            </dl>
+          </div>
+        </aside>
+      </div>
+
+      <!-- Dates -->
+      <h2 class="font-heading text-2xl mb-6">Prochaines dates</h2>
+      <div class="divide-y divide-white/10">
+        <div class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-6 py-4">
+          <span class="text-accent font-bold whitespace-nowrap">19 Juil. 2025</span>
+          <span class="text-white/80">Cohons — Jardins Remarquables Suspendus</span>
+          <span class="text-white/50 text-sm sm:ml-auto">21h00</span>
+        </div>
+        <div class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-6 py-4">
+          <span class="text-accent font-bold whitespace-nowrap">26 Juil. 2025</span>
+          <span class="text-white/80">Montigny-sur-Aube — Parc National de Forêts</span>
+          <span class="text-white/50 text-sm sm:ml-auto">18h30</span>
+        </div>
+        <div class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-6 py-4">
+          <span class="text-accent font-bold whitespace-nowrap">3 Oct. 2025</span>
+          <span class="text-white/80">Bourmont — Salle Louise Michel</span>
+        </div>
+        <div class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-6 py-4">
+          <span class="text-accent font-bold whitespace-nowrap">22 Oct. 2025</span>
+          <span class="text-white/80">Langres — Théâtre Michel Humbert</span>
+        </div>
+      </div>
+
+      <!-- Photos -->
+      <h2 class="font-heading text-2xl mt-12 mb-6">Photos</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <img src={asset('/chasseur-dimages-scene.jpg')} alt="Le Chasseur d'Images — Scène" class="w-full" loading="lazy" />
+        <img src={asset('/lonsdale.jpg')} alt="Le Chasseur d'Images" class="w-full" loading="lazy" />
+      </div>
+
+      <div class="mt-12">
+        <a href={url('/spectacles')} class="text-white/60 hover:text-accent uppercase text-sm tracking-wider font-bold transition-colors">&larr; Retour aux spectacles</a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

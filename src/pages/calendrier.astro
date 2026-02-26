@@ -1,0 +1,69 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro'
+import { url, asset } from '../utils/paths'
+---
+
+<BaseLayout title="Calendrier — Le Rocher des Doms" description="Prochaines dates et représentations de la Compagnie Le Rocher des Doms." currentPage="/calendrier">
+
+  <section class="py-16 md:py-24">
+    <div class="max-w-4xl mx-auto px-4">
+      <h1 class="font-heading text-4xl md:text-5xl text-center mb-4">Calendrier</h1>
+      <p class="text-center text-white/60 mb-12">Seules les représentations publiques sont indiquées. Pour les représentations scolaires ou privées, contactez la compagnie.</p>
+
+      <div class="divide-y divide-white/10">
+        <a href={url('/spectacles/le-chasseur-dimages')} class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-6 py-6 group">
+          <span class="text-accent font-bold whitespace-nowrap text-lg min-w-[140px]">19 Juil. 2025</span>
+          <div class="flex-1">
+            <span class="font-heading text-lg text-wheat group-hover:text-accent transition-colors block">Le Chasseur d'Images</span>
+            <span class="text-white/50 text-sm">Jardins Remarquables Suspendus, Cohons</span>
+          </div>
+          <span class="text-white/50 text-sm whitespace-nowrap">21h00</span>
+        </a>
+
+        <a href={url('/spectacles/le-chasseur-dimages')} class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-6 py-6 group">
+          <span class="text-accent font-bold whitespace-nowrap text-lg min-w-[140px]">26 Juil. 2025</span>
+          <div class="flex-1">
+            <span class="font-heading text-lg text-wheat group-hover:text-accent transition-colors block">Le Chasseur d'Images</span>
+            <span class="text-white/50 text-sm">Salle des Fêtes, Montigny-sur-Aube</span>
+          </div>
+          <span class="text-white/50 text-sm whitespace-nowrap">18h30</span>
+        </a>
+
+        <a href={url('/spectacles/le-souper')} class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-6 py-6 group">
+          <span class="text-accent font-bold whitespace-nowrap text-lg min-w-[140px]">16 Août 2025</span>
+          <div class="flex-1">
+            <span class="font-heading text-lg text-wheat group-hover:text-accent transition-colors block">Le Souper</span>
+            <span class="text-white/50 text-sm">Jardins de la Mairie, Châtillon-sur-Seine</span>
+          </div>
+        </a>
+
+        <a href={url('/spectacles/le-chasseur-dimages')} class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-6 py-6 group">
+          <span class="text-accent font-bold whitespace-nowrap text-lg min-w-[140px]">3 Oct. 2025</span>
+          <div class="flex-1">
+            <span class="font-heading text-lg text-wheat group-hover:text-accent transition-colors block">Le Chasseur d'Images</span>
+            <span class="text-white/50 text-sm">Salle Louise Michel, Bourmont</span>
+          </div>
+        </a>
+
+        <a href={url('/spectacles/le-chasseur-dimages')} class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-6 py-6 group">
+          <span class="text-accent font-bold whitespace-nowrap text-lg min-w-[140px]">22 Oct. 2025</span>
+          <div class="flex-1">
+            <span class="font-heading text-lg text-wheat group-hover:text-accent transition-colors block">Le Chasseur d'Images</span>
+            <span class="text-white/50 text-sm">Théâtre Michel Humbert, Langres</span>
+          </div>
+        </a>
+      </div>
+
+      <!-- Contact -->
+      <div class="bg-wine-80 border border-white/20 p-8 mt-12 text-center">
+        <h2 class="font-heading text-xl mb-3">Renseignements & Réservations</h2>
+        <p class="text-white/70 text-sm">
+          Espace Ménétrier, Rue Louis Jouvet, 21240 Talant<br />
+          <a href="mailto:cielerocherdesdoms@orange.fr" class="text-accent hover:text-accent-dark">cielerocherdesdoms@orange.fr</a><br />
+          Laurence Boyenval : 06 87 35 45 93 — Sylvain Marmorat : 06 84 12 12 64
+        </p>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

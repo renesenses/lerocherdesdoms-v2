@@ -1,0 +1,51 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro'
+import Hero from '../../components/Hero.astro'
+import { url, asset } from '../../utils/paths'
+---
+
+<BaseLayout title="Le Souper — Le Rocher des Doms" description="De Jean-Claude Brisville. Le face-à-face historique entre Fouché et Talleyrand." currentPage="/spectacles">
+
+  <Hero
+    image={asset('/le-souper.jpg')}
+    title="Le Souper"
+  />
+
+  <section class="py-16 md:py-24">
+    <div class="max-w-4xl mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+        <div class="md:col-span-2 space-y-6 text-white/80 leading-relaxed">
+          <p>De Jean-Claude Brisville. Le face-à-face historique entre Fouché et Talleyrand, le soir de la bataille de Waterloo. Deux hommes politiques que tout oppose doivent choisir l'avenir de la France autour d'un souper.</p>
+        </div>
+        <aside class="space-y-4">
+          <div class="border border-white/20 p-6">
+            <h3 class="font-heading text-lg mb-4">Informations</h3>
+            <dl class="space-y-3 text-sm">
+              <div>
+                <dt class="text-white/50 uppercase tracking-wider text-xs">Auteur</dt>
+                <dd>Jean-Claude Brisville</dd>
+              </div>
+              <div>
+                <dt class="text-white/50 uppercase tracking-wider text-xs">Genre</dt>
+                <dd>Théâtre — Drame historique</dd>
+              </div>
+            </dl>
+          </div>
+        </aside>
+      </div>
+
+      <h2 class="font-heading text-2xl mb-6">Prochaines dates</h2>
+      <div class="divide-y divide-white/10">
+        <div class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-6 py-4">
+          <span class="text-accent font-bold whitespace-nowrap">16 Août 2025</span>
+          <span class="text-white/80">Châtillon-sur-Seine — Jardins de la Mairie</span>
+        </div>
+      </div>
+
+      <div class="mt-12">
+        <a href={url('/spectacles')} class="text-white/60 hover:text-accent uppercase text-sm tracking-wider font-bold transition-colors">&larr; Retour aux spectacles</a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

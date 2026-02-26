@@ -1,0 +1,54 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro'
+import Hero from '../../components/Hero.astro'
+import { url, asset } from '../../utils/paths'
+---
+
+<BaseLayout title="Le Médecin Volant — Le Rocher des Doms" description="De Molière, mise en scène Pierre Yanelli. La vivacité bienveillante de Molière dans un cadre contemporain." currentPage="/spectacles">
+
+  <Hero
+    image={asset('/lmv-photo-full.jpg')}
+    title="Le Médecin Volant"
+  />
+
+  <section class="py-16 md:py-24">
+    <div class="max-w-4xl mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+        <div class="md:col-span-2 space-y-6 text-white/80 leading-relaxed">
+          <p>La vivacité bienveillante de Molière est transposée dans un cadre scénique coloré et contemporain. L'esthétique rappelle les catcheurs et les acrobates de cirque, avec des costumes éclatants et des éléments de scène clignotants.</p>
+          <p>Une farce burlesque avec des cascades acrobatiques.</p>
+        </div>
+        <aside class="space-y-4">
+          <div class="border border-white/20 p-6">
+            <h3 class="font-heading text-lg mb-4">Informations</h3>
+            <dl class="space-y-3 text-sm">
+              <div>
+                <dt class="text-white/50 uppercase tracking-wider text-xs">Auteur</dt>
+                <dd>Molière</dd>
+              </div>
+              <div>
+                <dt class="text-white/50 uppercase tracking-wider text-xs">Mise en scène</dt>
+                <dd>Pierre Yanelli</dd>
+              </div>
+              <div>
+                <dt class="text-white/50 uppercase tracking-wider text-xs">Genre</dt>
+                <dd>Farce burlesque</dd>
+              </div>
+            </dl>
+          </div>
+        </aside>
+      </div>
+
+      <h2 class="font-heading text-2xl mt-12 mb-6">Photos</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <img src={asset('/lmv-photo.jpg')} alt="Le Médecin Volant — Scène" class="w-full" loading="lazy" />
+        <img src={asset('/medecin-volant-affiche.jpg')} alt="Affiche Le Médecin Volant" class="w-full" loading="lazy" />
+      </div>
+
+      <div class="mt-12">
+        <a href={url('/spectacles')} class="text-white/60 hover:text-accent uppercase text-sm tracking-wider font-bold transition-colors">&larr; Retour aux spectacles</a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>
