@@ -1,6 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro'
-import Hero from '../components/Hero.astro'
+import HeroCarousel from '../components/HeroCarousel.astro'
 import SectionTitle from '../components/SectionTitle.astro'
 import SpectacleCard from '../components/SpectacleCard.astro'
 import { url, asset } from '../utils/paths'
@@ -8,14 +8,23 @@ import { url, asset } from '../utils/paths'
 
 <BaseLayout title="Compagnie de théâtre Le Rocher des Doms" currentPage="/">
 
-  <!-- Hero -->
-  <Hero
-    image={asset('/chasseur-dimages.jpg')}
-    title="Le Chasseur d'Images"
-    subtitle="En tournée — Découvrez notre dernière création"
-    ctaLabel="Voir les prochaines dates"
-    ctaHref={url('/calendrier')}
-  />
+  <!-- Hero Carrousel -->
+  <HeroCarousel slides={[
+    {
+      image: '/chasseur-dimages.jpg',
+      title: "Le Chasseur d'Images",
+      subtitle: "En tournée — Découvrez notre dernière création",
+      ctaLabel: "Voir les prochaines dates",
+      ctaHref: '/calendrier',
+    },
+    {
+      image: '/le-souper.jpg',
+      title: "Le Souper",
+      subtitle: "De Jean-Claude Brisville — Le face-à-face historique entre Fouché et Talleyrand",
+      ctaLabel: "Découvrir le spectacle",
+      ctaHref: '/spectacles/le-souper',
+    },
+  ]} />
 
   <!-- Spectacles en tournée -->
   <section class="py-16 md:py-24">
