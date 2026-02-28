@@ -66,45 +66,53 @@ const { slides } = Astro.props
   )}
 </section>
 
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const carousel = document.querySelector('[data-carousel]')
-    if (!carousel) return
+<script is:inline>
+  (function() {
+    var carousel = document.querySelector('[data-carousel]');
+    if (!carousel) return;
 
-    const slides = carousel.querySelectorAll<HTMLElement>('[data-slide]')
-    const dots = carousel.querySelectorAll<HTMLElement>('[data-dot]')
-    if (slides.length <= 1) return
+    var slides = carousel.querySelectorAll('[data-slide]');
+    var dots = carousel.querySelectorAll('[data-dot]');
+    if (slides.length <= 1) return;
 
-    let current = 0
-    let timer: ReturnType<typeof setInterval>
+    var current = 0;
+    var timer;
 
-    function goTo(index: number) {
-      slides[current].classList.replace('opacity-100', 'opacity-0')
-      slides[current].classList.replace('z-10', 'z-0')
-      dots[current]?.classList.replace('bg-white', 'bg-transparent')
+    function goTo(index) {
+      slides[current].classList.remove('opacity-100', 'z-10');
+      slides[current].classList.add('opacity-0', 'z-0');
+      if (dots[current]) {
+        dots[current].classList.remove('bg-white');
+        dots[current].classList.add('bg-transparent');
+      }
 
-      current = index
-      slides[current].classList.replace('opacity-0', 'opacity-100')
-      slides[current].classList.replace('z-0', 'z-10')
-      dots[current]?.classList.replace('bg-transparent', 'bg-white')
+      current = index;
+      slides[current].classList.remove('opacity-0', 'z-0');
+      slides[current].classList.add('opacity-100', 'z-10');
+      if (dots[current]) {
+        dots[current].classList.remove('bg-transparent');
+        dots[current].classList.add('bg-white');
+      }
     }
 
     function next() {
-      goTo((current + 1) % slides.length)
+      goTo((current + 1) % slides.length);
     }
 
     function startTimer() {
-      timer = setInterval(next, 6000)
+      timer = setInterval(next, 6000);
     }
 
-    dots.forEach((dot, i) => {
-      dot.addEventListener('click', () => {
-        clearInterval(timer)
-        goTo(i)
-        startTimer()
-      })
-    })
+    for (var i = 0; i < dots.length; i++) {
+      (function(idx) {
+        dots[idx].addEventListener('click', function() {
+          clearInterval(timer);
+          goTo(idx);
+          startTimer();
+        });
+      })(i);
+    }
 
-    startTimer()
-  })
+    startTimer();
+  })();
 </script>
