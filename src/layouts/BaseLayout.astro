@@ -63,6 +63,77 @@ const {
         nav.classList.toggle('hidden')
       })
     }
+
+    // Search
+    const searchPages = [
+      { title: 'Accueil', href: '/', keywords: 'compagnie théâtre rocher des doms spectacles école' },
+      { title: 'La Compagnie', href: '/compagnie', keywords: 'sylvain marmorat laurence boyenval adeline moncaut troupe histoire équipe directeur artistique' },
+      { title: 'Le Souper', href: '/spectacles/le-souper', keywords: 'souper jean-claude brisville fouché talleyrand waterloo spectacle tournée' },
+      { title: "Le Chasseur d'Images", href: '/spectacles/le-chasseur-dimages', keywords: 'chasseur images laurence boyenval forêt danse ombres chinoises masques simon marmorat' },
+      { title: 'Le Petit Bonnet Rouge', href: '/spectacles/le-petit-bonnet-rouge', keywords: 'petit bonnet rouge conte jeune public danse musique théâtre' },
+      { title: 'Le Médecin Volant', href: '/spectacles/le-medecin-volant', keywords: 'médecin volant molière pierre yanelli farce burlesque' },
+      { title: 'Spectacles en tournée', href: '/spectacles', keywords: 'spectacles tournée répertoire' },
+      { title: 'École de Théâtre', href: '/ecole', keywords: 'école théâtre talant cours primaires collégiens adultes ateliers inscription' },
+      { title: 'Calendrier', href: '/calendrier', keywords: 'calendrier dates prochaines représentations billetterie' },
+      { title: 'Actualités', href: '/actualites', keywords: 'actualités nouvelles articles' },
+      { title: 'Archives', href: '/archives', keywords: 'archives répertoire créations louise michel fille bien gardée poil de carotte phèdre amante anglaise' },
+      { title: 'Presse', href: '/presse', keywords: 'presse articles jhm journal haute-marne critiques' },
+      { title: 'Contact', href: '/contact', keywords: 'contact email téléphone adresse formulaire' },
+    ]
+
+    const base = document.querySelector('meta[property="og:url"]')?.getAttribute('content')?.replace(/\/[^/]*$/, '') || ''
+    const searchToggle = document.getElementById('search-toggle')
+    const searchOverlay = document.getElementById('search-overlay')
+    const searchInput = document.getElementById('search-input') as HTMLInputElement
+    const searchClose = document.getElementById('search-close')
+    const searchResults = document.getElementById('search-results')
+
+    function openSearch() {
+      searchOverlay?.classList.remove('hidden')
+      searchInput?.focus()
+    }
+    function closeSearch() {
+      searchOverlay?.classList.add('hidden')
+      if (searchInput) searchInput.value = ''
+      if (searchResults) searchResults.innerHTML = ''
+    }
+
+    searchToggle?.addEventListener('click', openSearch)
+    searchClose?.addEventListener('click', closeSearch)
+    searchOverlay?.addEventListener('click', (e) => {
+      if (e.target === searchOverlay) closeSearch()
+    })
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeSearch()
+      if ((e.metaKey || e.ctrlKey) && e.key === 'k') { e.preventDefault(); openSearch() }
+    })
+
+    searchInput?.addEventListener('input', () => {
+      const q = searchInput.value.toLowerCase().trim()
+      if (!searchResults) return
+      if (q.length < 2) { searchResults.innerHTML = ''; return }
+      const matches = searchPages.filter(p =>
+        p.title.toLowerCase().includes(q) || p.keywords.includes(q)
+      )
+      searchResults.innerHTML = matches.length
+        ? matches.map(p => `<a href="${p.href}" class="block border border-white/10 p-4 hover:border-accent transition-colors"><span class="font-heading text-lg text-wheat">${p.title}</span></a>`).join('')
+        : '<p class="text-white/50">Aucun résultat.</p>'
+    })
+
+    // Lightbox
+    document.querySelectorAll('[data-lightbox]').forEach(img => {
+      img.addEventListener('click', () => {
+        const src = (img as HTMLImageElement).src
+        const overlay = document.createElement('div')
+        overlay.className = 'fixed inset-0 z-[9999] bg-black/90 flex items-center justify-center cursor-pointer p-4'
+        overlay.innerHTML = `<img src="${src}" class="max-w-full max-h-full object-contain" />`
+        overlay.addEventListener('click', () => overlay.remove())
+        document.addEventListener('keydown', function handler(e) {
+          if (e.key === 'Escape') { overlay.remove(); document.removeEventListener('keydown', handler) }
+        })
+        document.body.appendChild(overlay)
+      })
+    })
   </script>
 </body>
 </html>

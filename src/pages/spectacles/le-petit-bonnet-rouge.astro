@@ -16,7 +16,11 @@ import { url, asset } from '../../utils/paths'
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
         <div class="md:col-span-2 space-y-6 text-white/80 leading-relaxed">
           <p>Dernière création de la compagnie — un spectacle théâtral et dansé mêlant théâtre, danse et musique. Trois comédiens et deux jeunes danseurs mêlent musique, danse, théâtre et lumière dans une merveilleuse création.</p>
-          <p>Un conte revisité pour le jeune public, plein de couleurs et de surprises.</p>
+          <blockquote class="border-l-4 border-accent pl-4 italic text-white/70">
+            « Le conte, la danse, le théâtre, la musique : quatre domaines artistiques que je voulais réunir pour raconter une histoire, partager des émotions, imager les scènes, et se laisser entraîner par le rythme. »
+            <footer class="text-white/50 text-sm mt-2 not-italic">— Laurence Boyenval</footer>
+          </blockquote>
+          <p class="text-white/50 text-sm">Avec le soutien de l'ADAMI.</p>
         </div>
         <aside class="space-y-4">
           <div class="border border-white/20 p-6">
@@ -34,10 +38,6 @@ import { url, asset } from '../../utils/paths'
                 <dt class="text-white/50 uppercase tracking-wider text-xs">Genre</dt>
                 <dd>Théâtre, danse, musique</dd>
               </div>
-              <div>
-                <dt class="text-white/50 uppercase tracking-wider text-xs">Tarifs</dt>
-                <dd>12€ / 8€</dd>
-              </div>
             </dl>
           </div>
         </aside>
@@ -45,9 +45,18 @@ import { url, asset } from '../../utils/paths'
 
       <h2 class="font-heading text-2xl mt-12 mb-6">Photos</h2>
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-        <img src={asset('/petit-bonnet-rouge-affiche.jpg')} alt="Affiche Le Petit Bonnet Rouge" class="w-full" loading="lazy" />
-        <img src={asset('/petit-bonnet-rouge-rehearsal.jpg')} alt="Répétition Le Petit Bonnet Rouge" class="w-full" loading="lazy" />
+        <img src={asset('/petit-bonnet-rouge-affiche.jpg')} alt="Affiche Le Petit Bonnet Rouge" class="w-full cursor-pointer" data-lightbox loading="lazy" />
+        <img src={asset('/petit-bonnet-rouge-rehearsal.jpg')} alt="Répétition Le Petit Bonnet Rouge" class="w-full cursor-pointer" data-lightbox loading="lazy" />
       </div>
+
+      <!-- Articles & Presse -->
+      <h2 class="font-heading text-2xl mt-12 mb-6">Articles & Presse</h2>
+      <ul class="space-y-2 text-sm">
+        <li><a href="https://www.lerocherdesdoms.org/le-petit-bonnet-rouge-4161" target="_blank" rel="noopener noreferrer" class="text-accent hover:text-accent-dark">Le Petit Bonnet Rouge — Présentation</a></li>
+        <li><a href="https://www.lerocherdesdoms.org/le-petit-bonnet-rouge-a-dijon-4316" target="_blank" rel="noopener noreferrer" class="text-accent hover:text-accent-dark">Le Petit Bonnet Rouge à Dijon</a></li>
+        <li><a href="https://www.lerocherdesdoms.org/le-petit-bonnet-rouge-le-teaser-4258" target="_blank" rel="noopener noreferrer" class="text-accent hover:text-accent-dark">Le Petit Bonnet Rouge — Le Teaser</a></li>
+        <li><a href="https://www.lerocherdesdoms.org/de-belles-representations-4229" target="_blank" rel="noopener noreferrer" class="text-accent hover:text-accent-dark">De belles représentations !</a></li>
+      </ul>
 
       <div class="mt-12">
         <a href={url('/spectacles')} class="text-white/60 hover:text-accent uppercase text-sm tracking-wider font-bold transition-colors">&larr; Retour aux spectacles</a>

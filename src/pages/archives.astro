@@ -23,10 +23,17 @@ import { url, asset } from '../utils/paths'
               <h3 class="font-heading text-2xl text-wheat mb-1">Louise Michel — Louise Maboul</h3>
               <p class="text-accent text-sm mb-3">2020 — Boyenval & Marmorat</p>
               <p class="text-white/70 mb-4">Hommage théâtral à Louise Michel. Interprètes : Sylvain Marmorat et Laurence Boyenval.</p>
+              <ul class="text-sm space-y-1 mb-4">
+                <li><a href="https://www.lerocherdesdoms.org/louise-jhm-01-09-2023-4320" target="_blank" rel="noopener noreferrer" class="text-accent hover:text-accent-dark">Louise — Article JHM (sept. 2023)</a></li>
+                <li><a href="https://www.lerocherdesdoms.org/louise-michel-louise-maboul-3811" target="_blank" rel="noopener noreferrer" class="text-accent hover:text-accent-dark">Dossier de présentation du spectacle</a></li>
+                <li><a href="https://www.lerocherdesdoms.org/louise-ce-que-les-spectateurs-en-disent-4085" target="_blank" rel="noopener noreferrer" class="text-accent hover:text-accent-dark">Louise… ce que vous en dites (retours spectateurs)</a></li>
+                <li><a href="https://www.lerocherdesdoms.org/la-commune-en-quelques-dates-3698" target="_blank" rel="noopener noreferrer" class="text-accent hover:text-accent-dark">La Commune en quelques dates</a></li>
+                <li><a href="https://www.lerocherdesdoms.org/les-ecraignes-de-louise-michel-un-symbole-revolutionnaire-3695" target="_blank" rel="noopener noreferrer" class="text-accent hover:text-accent-dark">Les Écraignes de Louise Michel : un symbole révolutionnaire</a></li>
+              </ul>
               <div class="grid grid-cols-3 gap-2">
-                <img src={asset('/louise-michel-scene-1.jpg')} alt="Louise Michel — Scène" class="w-full aspect-video object-cover" loading="lazy" />
-                <img src={asset('/louise-michel-scene-2.jpg')} alt="Louise Michel — Scène" class="w-full aspect-video object-cover" loading="lazy" />
-                <img src={asset('/img-1161.jpg')} alt="Sylvain Marmorat en répétition" class="w-full aspect-video object-cover" loading="lazy" />
+                <img src={asset('/louise-michel-scene-1.jpg')} alt="Louise Michel — Scène" class="w-full aspect-video object-cover cursor-pointer" data-lightbox loading="lazy" />
+                <img src={asset('/louise-michel-scene-2.jpg')} alt="Louise Michel — Scène" class="w-full aspect-video object-cover cursor-pointer" data-lightbox loading="lazy" />
+                <img src={asset('/img-1161.jpg')} alt="Sylvain Marmorat en répétition" class="w-full aspect-video object-cover cursor-pointer" data-lightbox loading="lazy" />
               </div>
             </div>
           </div>
@@ -41,17 +48,23 @@ import { url, asset } from '../utils/paths'
             <div class="md:col-span-2">
               <h3 class="font-heading text-2xl text-wheat mb-1">La Fille Bien Gardée</h3>
               <p class="text-accent text-sm mb-3">Eugène Labiche — Mise en scène : Sylvain Marmorat</p>
-              <p class="text-white/70 mb-4">Cinq comédiens chevronnés et une violoncelliste sur un texte vibrant de Labiche, dans l'énergie des farces de Molière.</p>
+              <p class="text-white/70 mb-3">Cinq comédiens chevronnés et une violoncelliste sur un texte vibrant de Labiche, dans l'énergie des farces de Molière.</p>
+              <ul class="text-sm space-y-1 mb-4">
+                <li><a href="https://www.lerocherdesdoms.org/la-fille-bien-gardee-avec-arts-scenes-cote-dor-4176" target="_blank" rel="noopener noreferrer" class="text-accent hover:text-accent-dark">Tournée avec Arts & Scènes Côte d'Or</a></li>
+                <li><a href="https://www.lerocherdesdoms.org/la-fille-bien-gardee-deugene-labiche-a-lecrin-une-franche-reussite-3739" target="_blank" rel="noopener noreferrer" class="text-accent hover:text-accent-dark">À l'Écrin : une franche réussite</a></li>
+                <li><a href="https://www.lerocherdesdoms.org/la-fille-bien-gardee-deugene-labiche-une-repetition-du-tonnerre-3708" target="_blank" rel="noopener noreferrer" class="text-accent hover:text-accent-dark">Une répétition du tonnerre !</a></li>
+                <li><a href="https://www.lerocherdesdoms.org/photos-la-fille-bien-gardee-deugene-labiche-representations-scolaires-a-lecrin-talant-25-et-27-mai-2021-3750" target="_blank" rel="noopener noreferrer" class="text-accent hover:text-accent-dark">Photos — Représentations scolaires à l'Écrin</a></li>
+              </ul>
               <div class="grid grid-cols-2 sm:grid-cols-4 gap-2">
-                <img src={asset('/fille-bien-gardee-scene-1.jpg')} alt="La Fille Bien Gardée — Scène" class="w-full aspect-video object-cover" loading="lazy" />
-                <img src={asset('/fille-bien-gardee-scene-2.jpg')} alt="La Fille Bien Gardée — Scène" class="w-full aspect-video object-cover" loading="lazy" />
-                <img src={asset('/fille-bien-gardee-scene-3.jpg')} alt="La Fille Bien Gardée — Scène" class="w-full aspect-video object-cover" loading="lazy" />
-                <img src={asset('/fille-bien-gardee-scene-4.jpg')} alt="La Fille Bien Gardée — Scène" class="w-full aspect-video object-cover" loading="lazy" />
+                <img src={asset('/fille-bien-gardee-scene-1.jpg')} alt="La Fille Bien Gardée — Scène" class="w-full aspect-video object-cover cursor-pointer" data-lightbox loading="lazy" />
+                <img src={asset('/fille-bien-gardee-scene-2.jpg')} alt="La Fille Bien Gardée — Scène" class="w-full aspect-video object-cover cursor-pointer" data-lightbox loading="lazy" />
+                <img src={asset('/fille-bien-gardee-scene-3.jpg')} alt="La Fille Bien Gardée — Scène" class="w-full aspect-video object-cover cursor-pointer" data-lightbox loading="lazy" />
+                <img src={asset('/fille-bien-gardee-scene-4.jpg')} alt="La Fille Bien Gardée — Scène" class="w-full aspect-video object-cover cursor-pointer" data-lightbox loading="lazy" />
               </div>
               <div class="grid grid-cols-3 gap-2 mt-2">
-                <img src={asset('/fille-bien-gardee-rehearsal-1.jpg')} alt="Répétition La Fille Bien Gardée" class="w-full aspect-video object-cover" loading="lazy" />
-                <img src={asset('/fille-bien-gardee-rehearsal-2.jpg')} alt="Répétition La Fille Bien Gardée" class="w-full aspect-video object-cover" loading="lazy" />
-                <img src={asset('/berthe-et-saint-germain.jpg')} alt="Berthe et Saint-Germain" class="w-full aspect-video object-cover" loading="lazy" />
+                <img src={asset('/fille-bien-gardee-rehearsal-1.jpg')} alt="Répétition La Fille Bien Gardée" class="w-full aspect-video object-cover cursor-pointer" data-lightbox loading="lazy" />
+                <img src={asset('/fille-bien-gardee-rehearsal-2.jpg')} alt="Répétition La Fille Bien Gardée" class="w-full aspect-video object-cover cursor-pointer" data-lightbox loading="lazy" />
+                <img src={asset('/berthe-et-saint-germain.jpg')} alt="Berthe et Saint-Germain" class="w-full aspect-video object-cover cursor-pointer" data-lightbox loading="lazy" />
               </div>
             </div>
           </div>
@@ -66,7 +79,12 @@ import { url, asset } from '../utils/paths'
             <div class="md:col-span-2">
               <h3 class="font-heading text-2xl text-wheat mb-1">Poil de Carotte</h3>
               <p class="text-accent text-sm mb-3">2017 — Jules Renard — Mise en scène : Sylvain Marmorat</p>
-              <p class="text-white/70">Adaptation du roman de Jules Renard par la compagnie.</p>
+              <p class="text-white/70 mb-3">Adaptation du roman de Jules Renard par la compagnie.</p>
+              <ul class="text-sm space-y-1">
+                <li><a href="https://www.lerocherdesdoms.org/poil-de-carotte-dossier-2482" target="_blank" rel="noopener noreferrer" class="text-accent hover:text-accent-dark">Poil de Carotte — Dossier de présentation</a></li>
+                <li><a href="https://www.lerocherdesdoms.org/poil-de-carotte-jhm-aout-2017-2626" target="_blank" rel="noopener noreferrer" class="text-accent hover:text-accent-dark">Poil de Carotte — JHM (août 2017)</a></li>
+                <li><a href="https://www.lerocherdesdoms.org/jhm-poil-de-carotte-joinville-aout-2019-3079" target="_blank" rel="noopener noreferrer" class="text-accent hover:text-accent-dark">JHM — Poil de Carotte à Joinville (août 2019)</a></li>
+              </ul>
             </div>
           </div>
         </article>
@@ -94,7 +112,12 @@ import { url, asset } from '../utils/paths'
             <div class="md:col-span-2">
               <h3 class="font-heading text-2xl text-wheat mb-1">Phèdre ~ Epilogue</h3>
               <p class="text-accent text-sm mb-3">2011 — Adaptation de Racine par Laurence Boyenval</p>
-              <p class="text-white/70">Adaptation contemporaine libre de la tragédie de Racine. Direction : Jacques Fornier & Sylvain Marmorat.</p>
+              <p class="text-white/70 mb-3">Adaptation contemporaine libre de la tragédie de Racine. Direction : Jacques Fornier & Sylvain Marmorat.</p>
+              <ul class="text-sm space-y-1">
+                <li><a href="https://www.lerocherdesdoms.org/dossier-phedre-1333" target="_blank" rel="noopener noreferrer" class="text-accent hover:text-accent-dark">Dossier Phèdre ~ Epilogue — Création 2011</a></li>
+                <li><a href="https://www.lerocherdesdoms.org/phedre-en-quete-de-verite-2809" target="_blank" rel="noopener noreferrer" class="text-accent hover:text-accent-dark">Phèdre en quête de vérité</a></li>
+                <li><a href="https://www.lerocherdesdoms.org/une-autre-vision-de-phedre-jsl-15042013-1357" target="_blank" rel="noopener noreferrer" class="text-accent hover:text-accent-dark">Une autre vision de Phèdre — JSL (avril 2013)</a></li>
+              </ul>
             </div>
           </div>
         </article>
@@ -108,7 +131,12 @@ import { url, asset } from '../utils/paths'
             <div class="md:col-span-2">
               <h3 class="font-heading text-2xl text-wheat mb-1">Fuga #Oratorio#</h3>
               <p class="text-accent text-sm mb-3">2009 — Jean-Michel Baudoin — Mise en scène : Sylvain Marmorat</p>
-              <p class="text-white/70">Deux couples séparés par les différences sociales mais unis par un destin similaire.</p>
+              <p class="text-white/70 mb-3">Deux couples séparés par les différences sociales mais unis par un destin similaire.</p>
+              <ul class="text-sm space-y-1">
+                <li><a href="https://www.lerocherdesdoms.org/a-venir-8-73" target="_blank" rel="noopener noreferrer" class="text-accent hover:text-accent-dark">Les Derniers Devoirs — Dossier</a></li>
+                <li><a href="https://www.lerocherdesdoms.org/une-piece-pleine-dinventivite-2838" target="_blank" rel="noopener noreferrer" class="text-accent hover:text-accent-dark">Une pièce pleine d'inventivité</a></li>
+                <li><a href="https://www.lerocherdesdoms.org/les-derniers-devoirs-au-theatre-le-bien-public-08-janvier-2012-883" target="_blank" rel="noopener noreferrer" class="text-accent hover:text-accent-dark">Les Derniers Devoirs au Théâtre — Le Bien Public (janv. 2012)</a></li>
+              </ul>
             </div>
           </div>
         </article>
@@ -147,22 +175,22 @@ import { url, asset } from '../utils/paths'
       <h2 class="font-heading text-2xl mb-8 text-center">Répertoire complet</h2>
       <div class="divide-y divide-white/10">
         {[
-          { year: '2023', title: 'Le Petit Bonnet Rouge', author: 'Laurence Boyenval' },
-          { year: '2020', title: 'Louise Michel # Louise Maboul', author: 'Boyenval & Marmorat' },
+          { year: '2023', title: 'Le Petit Bonnet Rouge', author: 'Laurence Boyenval', href: 'https://www.lerocherdesdoms.org/le-petit-bonnet-rouge-4161' },
+          { year: '2020', title: 'Louise Michel # Louise Maboul', author: 'Boyenval & Marmorat', href: 'https://www.lerocherdesdoms.org/louise-michel-louise-maboul-3811' },
           { year: '2018', title: "Le Songe d'une Nuit d'été", author: 'Shakespeare' },
-          { year: '2017', title: 'Poil de Carotte', author: 'Jules Renard' },
-          { year: '2016', title: 'La Fille Bien Gardée', author: 'Labiche' },
+          { year: '2017', title: 'Poil de Carotte', author: 'Jules Renard', href: 'https://www.lerocherdesdoms.org/poil-de-carotte-dossier-2482' },
+          { year: '2016', title: 'La Fille Bien Gardée', author: 'Labiche', href: 'https://www.lerocherdesdoms.org/la-fille-bien-gardee-avec-arts-scenes-cote-dor-4176' },
           { year: '2015', title: 'Le Nouveau Monde de Pilick', author: 'Annick Terriot' },
-          { year: '2014', title: 'Les Miettes', author: 'Louis Calaferte' },
+          { year: '2014', title: 'Les Miettes', author: 'Louis Calaferte', href: 'https://www.lerocherdesdoms.org/les-miettes-le-dossier-de-presentation-1812' },
           { year: '2013', title: "L'Histoire d'Amour du Siècle", author: 'Marta Tikkanen' },
           { year: '2012', title: "L'Amante Anglaise", author: 'Marguerite Duras' },
-          { year: '2011', title: 'Phèdre ~ Epilogue', author: 'Racine (adaptation)' },
-          { year: '2010', title: 'Le Médecin Volant', author: 'Molière' },
-          { year: '2009', title: 'Les Derniers Devoirs / Fuga', author: 'Calaferte / Baudoin' },
+          { year: '2011', title: 'Phèdre ~ Epilogue', author: 'Racine (adaptation)', href: 'https://www.lerocherdesdoms.org/dossier-phedre-1333' },
+          { year: '2010', title: 'Le Médecin Volant', author: 'Molière', href: 'https://www.lerocherdesdoms.org/a-venir-6-84' },
+          { year: '2009', title: 'Les Derniers Devoirs / Fuga', author: 'Calaferte / Baudoin', href: 'https://www.lerocherdesdoms.org/a-venir-8-73' },
           { year: '2008', title: 'Le Siège de Talant / Les Écraignes', author: 'Ghelderode (adapt.)' },
           { year: '2007', title: 'Britannicus', author: 'Jean Racine' },
           { year: '2006', title: 'Travaux de territoire / Opéra Bleu', author: 'Louis Calaferte' },
-          { year: '2005', title: 'Clap et Black Out', author: 'Louis Calaferte' },
+          { year: '2005', title: 'Clap et Black Out', author: 'Louis Calaferte', href: 'https://www.lerocherdesdoms.org/clap-et-black-out-de-louis-calaferte-259' },
           { year: '2003', title: "L'Histoire du Soldat / La Princesse et le Camionneur", author: 'Ramuz / Taffin' },
           { year: '2001', title: 'Phèdre & Hippolyte / La nuit juste avant les forêts', author: 'Racine / Koltès' },
           { year: '2000', title: 'Les Sincères / Far-Craf', author: 'Marivaux / Pinter, Ghelderode, Buzzati' },
@@ -177,7 +205,10 @@ import { url, asset } from '../utils/paths'
         ].map(item => (
           <div class="flex items-baseline gap-4 py-3">
             <span class="text-accent font-bold min-w-[3rem]">{item.year}</span>
-            <span class="text-wheat">{item.title}</span>
+            {item.href
+              ? <a href={item.href} target="_blank" rel="noopener noreferrer" class="text-wheat hover:text-accent transition-colors">{item.title}</a>
+              : <span class="text-wheat">{item.title}</span>
+            }
             <span class="text-white/40 text-sm ml-auto hidden sm:block">{item.author}</span>
           </div>
         ))}

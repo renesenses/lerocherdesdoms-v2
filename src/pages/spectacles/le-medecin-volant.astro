@@ -15,12 +15,12 @@ import { url, asset } from '../../utils/paths'
     <div class="max-w-4xl mx-auto px-4">
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
         <div class="md:col-span-2 space-y-6 text-white/80 leading-relaxed">
-          <p>La vivacité bienveillante de Molière est transposée dans un cadre scénique coloré et contemporain. L'esthétique rappelle les catcheurs et les acrobates de cirque, avec des costumes éclatants et des éléments de scène clignotants.</p>
-          <p>Une farce burlesque avec des cascades acrobatiques.</p>
+          <p>La vivacité bienveillante de Molière est transposée dans un cadre scénique coloré et contemporain : l'énergie scintillante des costumes empruntée aux couleurs des tenues des catcheurs de ring.</p>
+          <p>Les comédiens sont remis au centre de tensions, de joutes verbales et d'une scène dépouillée.</p>
         </div>
         <aside class="space-y-4">
           <div class="border border-white/20 p-6">
-            <h3 class="font-heading text-lg mb-4">Informations</h3>
+            <h3 class="font-heading text-lg mb-4">Équipe</h3>
             <dl class="space-y-3 text-sm">
               <div>
                 <dt class="text-white/50 uppercase tracking-wider text-xs">Auteur</dt>
@@ -29,6 +29,10 @@ import { url, asset } from '../../utils/paths'
               <div>
                 <dt class="text-white/50 uppercase tracking-wider text-xs">Mise en scène</dt>
                 <dd>Pierre Yanelli</dd>
+              </div>
+              <div>
+                <dt class="text-white/50 uppercase tracking-wider text-xs">Costumes</dt>
+                <dd>Louisa Breysse</dd>
               </div>
               <div>
                 <dt class="text-white/50 uppercase tracking-wider text-xs">Genre</dt>
@@ -41,9 +45,18 @@ import { url, asset } from '../../utils/paths'
 
       <h2 class="font-heading text-2xl mt-12 mb-6">Photos</h2>
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-        <img src={asset('/lmv-photo.jpg')} alt="Le Médecin Volant — Scène" class="w-full" loading="lazy" />
-        <img src={asset('/medecin-volant-affiche.jpg')} alt="Affiche Le Médecin Volant" class="w-full" loading="lazy" />
+        <img src={asset('/lmv-photo.jpg')} alt="Le Médecin Volant — Scène" class="w-full cursor-pointer" data-lightbox loading="lazy" />
+        <img src={asset('/medecin-volant-affiche.jpg')} alt="Affiche Le Médecin Volant" class="w-full cursor-pointer" data-lightbox loading="lazy" />
       </div>
+
+      <!-- Articles & Presse -->
+      <h2 class="font-heading text-2xl mt-12 mb-6">Articles & Presse</h2>
+      <ul class="space-y-2 text-sm">
+        <li><a href="https://www.lerocherdesdoms.org/a-venir-6-84" target="_blank" rel="noopener noreferrer" class="text-accent hover:text-accent-dark">Le Médecin Volant de Molière — Présentation</a></li>
+        <li><a href="https://www.lerocherdesdoms.org/le-medecin-volant-critique-2231" target="_blank" rel="noopener noreferrer" class="text-accent hover:text-accent-dark">Le Médecin Volant — Critique</a></li>
+        <li><a href="https://www.lerocherdesdoms.org/extraits-video-du-medecin-volant-en-live-a-labreuvoir-a-salives-1442" target="_blank" rel="noopener noreferrer" class="text-accent hover:text-accent-dark">Extraits Vidéo — En live à l'Abreuvoir à Salives</a></li>
+        <li><a href="https://www.lerocherdesdoms.org/un-petit-manege-de-desirs-le-bien-public-10-juin-2010-830" target="_blank" rel="noopener noreferrer" class="text-accent hover:text-accent-dark">Un petit manège de désirs — Le Bien Public (juin 2010)</a></li>
+      </ul>
 
       <div class="mt-12">
         <a href={url('/spectacles')} class="text-white/60 hover:text-accent uppercase text-sm tracking-wider font-bold transition-colors">&larr; Retour aux spectacles</a>

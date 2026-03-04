@@ -30,9 +30,9 @@ const year = new Date().getFullYear()
       <!-- Newsletter -->
       <div>
         <h3 class="font-heading text-lg mb-3">Newsletter</h3>
-        <form class="flex flex-col gap-2" action="https://formsubmit.co/cielerocherdesdoms@orange.fr" method="POST">
+        <form id="newsletter-form" class="flex flex-col gap-2" action="https://formsubmit.co/ajax/cielerocherdesdoms@orange.fr" method="POST">
           <input type="hidden" name="_subject" value="Nouvelle inscription newsletter — Le Rocher des Doms" />
-          <input type="hidden" name="_captcha" value="true" />
+          <input type="hidden" name="_captcha" value="false" />
           <input type="hidden" name="_template" value="table" />
           <input type="text" name="_honey" style="display:none" />
           <input
@@ -43,10 +43,41 @@ const year = new Date().getFullYear()
             required
             class="w-full px-3 py-2 bg-transparent border border-white/30 text-white text-sm placeholder:text-white/40 focus:border-accent focus:outline-none transition-colors"
           />
-          <button type="submit" class="bg-accent hover:bg-accent-dark text-white text-sm uppercase tracking-wider py-2 px-4 transition-colors">
+          <button type="submit" id="newsletter-btn" class="bg-accent hover:bg-accent-dark text-white text-sm uppercase tracking-wider py-2 px-4 transition-colors">
             S'inscrire
           </button>
+          <p id="newsletter-msg" class="text-sm hidden"></p>
         </form>
+        <script>
+          const nf = document.getElementById('newsletter-form') as HTMLFormElement
+          const nm = document.getElementById('newsletter-msg')!
+          const nb = document.getElementById('newsletter-btn') as HTMLButtonElement
+          nf?.addEventListener('submit', async (e) => {
+            e.preventDefault()
+            nb.disabled = true
+            nb.textContent = 'Envoi…'
+            try {
+              const res = await fetch(nf.action, {
+                method: 'POST',
+                body: new FormData(nf),
+                headers: { 'Accept': 'application/json' }
+              })
+              if (res.ok) {
+                nm.textContent = 'Merci pour votre inscription !'
+                nm.className = 'text-sm text-green-400'
+                nf.reset()
+              } else {
+                nm.textContent = 'Une erreur est survenue. Réessayez.'
+                nm.className = 'text-sm text-red-400'
+              }
+            } catch {
+              nm.textContent = 'Une erreur est survenue. Réessayez.'
+              nm.className = 'text-sm text-red-400'
+            }
+            nb.disabled = false
+            nb.textContent = "S'inscrire"
+          })
+        </script>
       </div>
     </div>
 
