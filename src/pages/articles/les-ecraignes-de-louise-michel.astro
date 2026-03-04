@@ -1,0 +1,36 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro'
+import { url, asset } from '../../utils/paths'
+---
+
+<BaseLayout title="Les Ecraignes de Louise Michel — Le Rocher des Doms" description="Les Ecraignes de Louise Michel, un symbole révolutionnaire. Article de Clément Privolt." currentPage="/spectacles">
+
+  <section class="py-16 md:py-24">
+    <div class="max-w-3xl mx-auto px-4">
+      <p class="text-accent text-sm uppercase tracking-wider mb-4">Louise Michel — Louise Maboul</p>
+      <h1 class="font-heading text-3xl md:text-4xl mb-2">Les Ecraignes de Louise Michel&nbsp;: un symbole révolutionnaire</h1>
+      <p class="text-white/50 text-sm mb-8">Par Clément Privolt — Avril 2021</p>
+
+      <div class="space-y-6 text-white/80 leading-relaxed">
+        <p class="text-lg italic text-wheat/90">Avez-vous déjà lu l'ouvrage de Louise Michel intitulé <em>« La révolution en contant&nbsp;; histoires, contes et légendes »</em>&nbsp;?</p>
+
+        <p>Louise Michel raconte dans ses mémoires que sa grand-mère l'emmenait régulièrement assister à des « Ecraignes » dans sa jeunesse, notamment à Chassigny (Haute-Marne).</p>
+
+        <p>Comme l'explique Emile Jolibois, à l'origine, les Ecraignes du Moyen-Âge étaient <em>« des espèces de réduits en partie souterrains, qu'on recouvrait de branchages et de terre pour y concentrer la chaleur et peut-être pour y couvrir les parfums de soufre »</em>.</p>
+
+        <p>Les Ecraignes sont des cavités naturelles recouvertes de branchages, connues aussi sous les noms de cagnas, cambuses, canfouines, taudis, tanières, bordes, cul-de-loup.</p>
+
+        <p>Louise Michel mentionne des veillées où les femmes se réunissaient secrètement.</p>
+
+        <h2 class="font-heading text-xl text-wheat mt-8">Le projet artistique</h2>
+
+        <p>Sylvain Marmorat, originaire de Châtillon-sur-Seine, développe un projet artistique ancré localement au sein du Parc National de Forêts en Champagne et Bourgogne.</p>
+      </div>
+
+      <div class="mt-12 flex gap-4">
+        <a href={url('/archives')} class="text-white/60 hover:text-accent uppercase text-sm tracking-wider font-bold transition-colors">&larr; Archives</a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

@@ -1,0 +1,52 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro'
+import { url, asset } from '../../utils/paths'
+---
+
+<BaseLayout title="De belles représentations — Le Rocher des Doms" description="Retours des spectateurs sur Le Petit Bonnet Rouge." currentPage="/spectacles">
+
+  <section class="py-16 md:py-24">
+    <div class="max-w-3xl mx-auto px-4">
+      <p class="text-accent text-sm uppercase tracking-wider mb-4">Le Petit Bonnet Rouge</p>
+      <h1 class="font-heading text-3xl md:text-4xl mb-2">De belles représentations&nbsp;!</h1>
+      <p class="text-white/50 text-sm mb-8">Février 2023</p>
+
+      <div class="space-y-6 text-white/80 leading-relaxed">
+        <h2 class="font-heading text-2xl text-wheat">Retours des adultes</h2>
+
+        <blockquote class="border-l-4 border-accent pl-4 italic text-white/70 my-4">
+          « Belle prestation scénique des trois comédiens et Big up spécial aux deux jeunes danseurs. »
+        </blockquote>
+
+        <blockquote class="border-l-4 border-accent pl-4 italic text-white/70 my-4">
+          « On entre dans l'antre d'un célèbre conte classique et ancien pour enfants. »
+        </blockquote>
+
+        <blockquote class="border-l-4 border-accent pl-4 italic text-white/70 my-4">
+          « Magnifique création dans laquelle la danse, le théâtre et la musique s'unissent. »
+        </blockquote>
+
+        <blockquote class="border-l-4 border-accent pl-4 italic text-white/70 my-4">
+          « Bravo à toute l'équipe !!! »
+        </blockquote>
+
+        <h2 class="font-heading text-2xl text-wheat mt-8">Retours des enfants</h2>
+        <p class="text-white/50 text-sm mb-4">École Jeanne d'Arc</p>
+
+        <p>Les enfants ont particulièrement apprécié&nbsp;:</p>
+        <ul class="list-disc pl-6 space-y-2">
+          <li>Les danses et la musique</li>
+          <li>Les acrobaties et leur difficulté</li>
+          <li>Le personnage du loup et l'atmosphère créée</li>
+          <li>Les scènes comiques avec la grand-mère</li>
+          <li>Les similarités avec les contes de Grimm et Perrault</li>
+        </ul>
+      </div>
+
+      <div class="mt-12 flex gap-4">
+        <a href={url('/spectacles/le-petit-bonnet-rouge')} class="text-white/60 hover:text-accent uppercase text-sm tracking-wider font-bold transition-colors">&larr; Le Petit Bonnet Rouge</a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

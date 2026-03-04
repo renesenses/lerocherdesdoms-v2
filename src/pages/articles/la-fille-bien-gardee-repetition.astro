@@ -1,0 +1,41 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro'
+import { url, asset } from '../../utils/paths'
+---
+
+<BaseLayout title="La Fille Bien Gardée : une répétition du tonnerre — Le Rocher des Doms" description="Les répétitions de La Fille Bien Gardée d'Eugène Labiche." currentPage="/spectacles">
+
+  <section class="py-16 md:py-24">
+    <div class="max-w-3xl mx-auto px-4">
+      <p class="text-accent text-sm uppercase tracking-wider mb-4">La Fille Bien Gardée</p>
+      <h1 class="font-heading text-3xl md:text-4xl mb-2">« La Fille Bien Gardée » d'Eugène Labiche&nbsp;: une répétition du tonnerre&nbsp;!</h1>
+      <p class="text-white/50 text-sm mb-8">Par Clément Privolt — Mai 2021</p>
+
+      <div class="space-y-6 text-white/80 leading-relaxed">
+        <p>Du tonnerre, de la folie, de la décadence que diable ! C'est dans une atmosphère à la fois festive et rigoureuse que se sont déroulées les répétitions du Jeudi 29 Avril à l'espace Brassens, salle Gabin (21240 Talant). Les cinq comédiens ainsi que la musicienne étaient présents&nbsp;: Lolita Franck (Berthe), Lison Goillot (la baronne de Flasquemont), Adeline Moncaut (Marie, femme de chambre), Loïc Galenski (Rocambole, carabinier), Sylvain Marmorat (metteur en scène, dans le rôle de Saint-Germain) et Evelyne Peudon (violoncelliste).</p>
+
+        <p>L'intrigue repose sur le comique de situation. La baronne de Flasquemont confie sa fille Berthe à ses domestiques Marie et Saint-Germain avant de sortir. Ces derniers envisagent d'aller festoyer au bal Mabille, situé sous leur fenêtre, laissant Berthe endormie seule. S'ensuivent des situations rocambolesques accompagnées par les compositions du violoncelle d'Evelyne.</p>
+
+        <blockquote class="border-l-4 border-accent pl-4 italic text-white/70 my-6">
+          « Sapristi, vous l'avez fait fumer ! »
+        </blockquote>
+
+        <blockquote class="border-l-4 border-accent pl-4 italic text-white/70 my-6">
+          « C'est pas du Kirsch, ça ! »
+        </blockquote>
+
+        <p>La Compagnie a créé ce spectacle en 2016 avec Laurence Boyenval. Pour cette reprise, Laurence dirige les comédiens.</p>
+
+        <blockquote class="border-l-4 border-accent pl-4 italic text-white/70 my-6">
+          « Les fous passent. La folie reste »
+          <footer class="text-white/50 text-sm mt-2 not-italic">— Sébastien Brant</footer>
+        </blockquote>
+      </div>
+
+      <div class="mt-12 flex gap-4">
+        <a href={url('/archives')} class="text-white/60 hover:text-accent uppercase text-sm tracking-wider font-bold transition-colors">&larr; Archives</a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

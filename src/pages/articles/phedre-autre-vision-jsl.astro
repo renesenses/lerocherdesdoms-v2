@@ -1,0 +1,36 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro'
+import { url, asset } from '../../utils/paths'
+---
+
+<BaseLayout title="Une autre vision de Phèdre — Le Rocher des Doms" description="Critique de Phèdre Epilogue par Norbert Estienne dans le JSL." currentPage="/spectacles">
+
+  <section class="py-16 md:py-24">
+    <div class="max-w-3xl mx-auto px-4">
+      <p class="text-accent text-sm uppercase tracking-wider mb-4">Phèdre ~ Epilogue</p>
+      <h1 class="font-heading text-3xl md:text-4xl mb-2">Une autre vision de « Phèdre »</h1>
+      <p class="text-white/50 text-sm mb-8">Par Norbert Estienne — JSL, 15 avril 2013</p>
+
+      <div class="space-y-6 text-white/80 leading-relaxed">
+        <p class="italic text-white/50">L'interprétation de cette pièce demande à ses interprètes beaucoup de concentration et de maîtrise de leur art.</p>
+
+        <p>Mercredi et jeudi, le théâtre municipal d'Autun a accueilli trois représentations d'une pièce alliant à la fois tragédie antique et théâtre moderne.</p>
+
+        <p>Intitulée <em>Phèdre, Épilogue</em>, cette œuvre basée sur le texte original de Jean Racine a permis au public de découvrir une vision nouvelle de l'intrigue. Interprétée par Laurence Boyenval dans le rôle de Phèdre et Sylvain Marmorat dans celui d'un spectre venant rappeler à l'héroïne pourquoi elle en est là, cette pièce a malgré tout dérouté quelque peu les spectateurs.</p>
+
+        <p>Alors que ces derniers s'attendaient à retrouver les personnages de la tragédie originelle, certains ont avoué avoir été surpris du choix des interprètes. En effet, seuls les monologues de Phèdre sont ici remis en scène de façon post-mortem, permettant d'apporter un éclairage plus important sur sa propre histoire.</p>
+
+        <p>Ce « parti pris », comme l'ont qualifié quelques spectateurs, n'est pas pour autant dénué d'intérêt et la mise en scène, sobre et épurée, apporte une touche contemporaine tout à fait bienvenue. Quant à la qualité d'interprétation des comédiens, elle a été unanimement reconnue et saluée par un public ressorti « bousculé » par une telle concentration d'émotions.</p>
+
+        <p>L'autre atout a été sans conteste le dialogue créé entre les comédiens et le public à l'issue de chaque représentation. Cerise sur le gâteau, Jacques Fornier, grand Monsieur du théâtre qui a dirigé ici les acteurs, était également présent pour livrer sa vision des choses.</p>
+
+        <p>En résumé, <em>Phèdre, Épilogue</em> interroge et suscite un intérêt tout particulier auprès du public. Une pièce à voir absolument, que l'on soit puriste ou simple amateur de spectacle hors norme.</p>
+      </div>
+
+      <div class="mt-12 flex gap-4">
+        <a href={url('/archives')} class="text-white/60 hover:text-accent uppercase text-sm tracking-wider font-bold transition-colors">&larr; Archives</a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

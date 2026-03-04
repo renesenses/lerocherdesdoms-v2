@@ -1,0 +1,48 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro'
+import { url, asset } from '../../utils/paths'
+---
+
+<BaseLayout title="La Fille Bien Gardée avec Arts & Scènes — Le Rocher des Doms" description="La tournée de La Fille Bien Gardée avec Arts & Scènes Côte d'Or." currentPage="/spectacles">
+
+  <section class="py-16 md:py-24">
+    <div class="max-w-3xl mx-auto px-4">
+      <p class="text-accent text-sm uppercase tracking-wider mb-4">La Fille Bien Gardée</p>
+      <h1 class="font-heading text-3xl md:text-4xl mb-2">La Fille Bien Gardée avec Arts &amp; Scènes Côte d'Or</h1>
+      <p class="text-white/50 text-sm mb-8">Novembre 2022</p>
+
+      <div class="space-y-6 text-white/80 leading-relaxed">
+        <p>La tournée de notre spectacle <em>La Fille Bien Gardée</em> d'Eugène Labiche avec Arts &amp; Scènes Côte d'Or continue en 2023&nbsp;:</p>
+
+        <div class="divide-y divide-white/10">
+          <div class="flex items-baseline gap-4 py-3">
+            <span class="text-accent font-bold min-w-[8rem]">10 mars</span>
+            <span class="text-wheat">Saulieu</span>
+          </div>
+          <div class="flex items-baseline gap-4 py-3">
+            <span class="text-accent font-bold min-w-[8rem]">1er avril</span>
+            <span class="text-wheat">Is-sur-Tille</span>
+          </div>
+          <div class="flex items-baseline gap-4 py-3">
+            <span class="text-accent font-bold min-w-[8rem]">27 mai</span>
+            <span class="text-wheat">Aignay-le-Duc</span>
+          </div>
+        </div>
+
+        <p class="mt-6">Mais aussi sans Arts et Scènes Côte d'Or&nbsp;:</p>
+
+        <div class="divide-y divide-white/10">
+          <div class="flex items-baseline gap-4 py-3">
+            <span class="text-accent font-bold min-w-[8rem]">17 mars</span>
+            <span class="text-wheat">Corcelles-les-Monts</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-12 flex gap-4">
+        <a href={url('/archives')} class="text-white/60 hover:text-accent uppercase text-sm tracking-wider font-bold transition-colors">&larr; Archives</a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

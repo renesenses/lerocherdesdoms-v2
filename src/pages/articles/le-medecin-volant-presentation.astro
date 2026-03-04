@@ -1,0 +1,54 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro'
+import { url, asset } from '../../utils/paths'
+---
+
+<BaseLayout title="Le Médecin Volant — Présentation — Le Rocher des Doms" description="Présentation complète du Médecin Volant de Molière, mis en scène par Pierre Yanelli." currentPage="/spectacles">
+
+  <section class="py-16 md:py-24">
+    <div class="max-w-4xl mx-auto px-4">
+      <p class="text-accent text-sm uppercase tracking-wider mb-4">Le Médecin Volant — Molière</p>
+      <h1 class="font-heading text-3xl md:text-4xl mb-8">Le Médecin Volant de Molière</h1>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+        <div class="md:col-span-2 space-y-6 text-white/80 leading-relaxed">
+          <p>La vivacité bienveillante de Molière est transposée dans un cadre scénique coloré et contemporain. L'approche s'inspire des tenues de catcheurs de ring et des costumes de cirque, employant des couleurs vives accompagnées d'un usage dynamique de tabourets, de mouvements acrobatiques et de performances aériennes.</p>
+
+          <p>La farce repose sur l'art d'éviter la détection par une tromperie rapide sans considérer les conséquences. La pièce construit la tension par une action constante — combats physiques, poursuites, feintes et contacts corporels rappelant les spectacles de foire.</p>
+
+          <p>La mise en scène met l'accent sur une énergie en cascade, à travers des ascensions fanfaronnes, des chutes convaincantes et des pivots urgents. Les personnages perdent et retrouvent constamment l'équilibre par les excès de Sganarelle, les poussées bienveillantes de Gorgibus et les renversements de Gros-René.</p>
+
+          <p>Les séquences acrobatiques s'intensifient progressivement vers une virtuosité finale de plus en plus périlleuse, culminant dans le finale aérien du valet.</p>
+        </div>
+        <aside>
+          <div class="border border-white/20 p-6">
+            <h3 class="font-heading text-lg mb-4">Équipe</h3>
+            <dl class="space-y-3 text-sm">
+              <div>
+                <dt class="text-white/50 uppercase tracking-wider text-xs">Texte</dt>
+                <dd>Molière</dd>
+              </div>
+              <div>
+                <dt class="text-white/50 uppercase tracking-wider text-xs">Mise en scène</dt>
+                <dd>Pierre Yanelli</dd>
+              </div>
+              <div>
+                <dt class="text-white/50 uppercase tracking-wider text-xs">Distribution</dt>
+                <dd>Simon Marmorat, Sylvain Marmorat, Benoit Chauleur</dd>
+              </div>
+              <div>
+                <dt class="text-white/50 uppercase tracking-wider text-xs">Costumes</dt>
+                <dd>Louisa Breysse</dd>
+              </div>
+            </dl>
+          </div>
+        </aside>
+      </div>
+
+      <div class="mt-12 flex gap-4">
+        <a href={url('/spectacles/le-medecin-volant')} class="text-white/60 hover:text-accent uppercase text-sm tracking-wider font-bold transition-colors">&larr; Le Médecin Volant</a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

@@ -1,0 +1,54 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro'
+import { url, asset } from '../../utils/paths'
+---
+
+<BaseLayout title="Un petit manège de désirs — Le Rocher des Doms" description="Interview de Pierre Yanelli sur Le Médecin Volant, parue dans Le Bien Public." currentPage="/spectacles">
+
+  <section class="py-16 md:py-24">
+    <div class="max-w-3xl mx-auto px-4">
+      <p class="text-accent text-sm uppercase tracking-wider mb-4">Le Médecin Volant — Molière</p>
+      <h1 class="font-heading text-3xl md:text-4xl mb-2">Un petit manège de désirs</h1>
+      <p class="text-white/50 text-sm mb-8">Propos recueillis par Guillaume Malvoisin — Le Bien Public, 10 juin 2010</p>
+
+      <div class="space-y-6 text-white/80 leading-relaxed">
+        <p>Leur dernière création, <em>Le Médecin Volant</em> de Molière remet les comédiens au centre de tensions, de joutes verbales et d'une scène dépouillée. De quoi voir jaillir le plaisir qui caractérise la compagnie&nbsp;: celui de la rencontre avec le spectateur. Pierre Yanelli nous donne quelques clés du travail de ses compères.</p>
+
+        <div class="space-y-8 mt-8">
+          <div>
+            <p class="text-wheat font-bold mb-2">Pierre Yanelli&nbsp;:</p>
+            <blockquote class="border-l-4 border-accent pl-4 italic text-white/70">
+              « Il existe beaucoup de contraintes pour ce Molière, les cadres sont solides. L'idée est de jouer le plus possible, le longtemps possible et que cela convienne à tout le monde. »
+            </blockquote>
+          </div>
+
+          <div>
+            <p class="text-white/50 italic mb-2">De plus, cette contrainte vous offre la possibilité du jeu.</p>
+            <blockquote class="border-l-4 border-accent pl-4 italic text-white/70">
+              « C'est un moteur recherche, le plaisir simple de la mécanique chez Molière. Avec le Médecin Volant, nous avons une pièce dont l'authenticité est incertaine. Cela laisse une grande liberté. On peut en garder les principes et les nourrir d'une énergie et d'envies qui nous sont propres. »
+            </blockquote>
+          </div>
+
+          <div>
+            <p class="text-white/50 italic mb-2">Vous parlez de cette pièce comme une esquisse&nbsp;?</p>
+            <blockquote class="border-l-4 border-accent pl-4 italic text-white/70">
+              « Oui, c'est un canevas qui annonce d'autres pièces futures. Molière est toujours dans cet entre-deux — d'un côté l'art populaire qui divertit et de l'autre un théâtre plus savant. »
+            </blockquote>
+          </div>
+
+          <div>
+            <p class="text-white/50 italic mb-2">Cette esquisse agit-elle comme une source d'invention pour votre compagnie&nbsp;?</p>
+            <blockquote class="border-l-4 border-accent pl-4 italic text-white/70">
+              « Oh oui, elle laisse beaucoup d'opportunités pour l'acteur. Il y a toujours le désir attrapé par la queue, chaque personnage arrive pour son plaisir qui finira par être empêché. Il y a une spirale qui s'enclenche très vite, comme un petit manège du désirs. Il y a donc le plaisir de l'histoire puis le plaisir du jeu pour le comédien. Les métamorphoses et les pirouettes sont nombreuses et sont redoublées du fait du nombre restreint de comédiens dans la compagnie. Nous ne sommes que trois pour cette pièce. »
+            </blockquote>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-12 flex gap-4">
+        <a href={url('/spectacles/le-medecin-volant')} class="text-white/60 hover:text-accent uppercase text-sm tracking-wider font-bold transition-colors">&larr; Le Médecin Volant</a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

@@ -1,0 +1,111 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro'
+import { url, asset } from '../../utils/paths'
+---
+
+<BaseLayout title="Le Petit Bonnet Rouge — Présentation — Le Rocher des Doms" description="Présentation complète du spectacle Le Petit Bonnet Rouge par Laurence Boyenval." currentPage="/spectacles">
+
+  <section class="py-16 md:py-24">
+    <div class="max-w-4xl mx-auto px-4">
+      <p class="text-accent text-sm uppercase tracking-wider mb-4">Le Petit Bonnet Rouge</p>
+      <h1 class="font-heading text-3xl md:text-4xl mb-8">Le Petit Bonnet Rouge</h1>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+        <div class="md:col-span-2 space-y-6 text-white/80 leading-relaxed">
+          <blockquote class="border-l-4 border-accent pl-4 italic text-white/70">
+            « Le conte, la danse, le théâtre, la musique : quatre domaines artistiques que je voulais réunir pour raconter une histoire, partager des émotions, imager les scènes, et se laisser entraîner par le rythme. »
+            <footer class="text-white/50 text-sm mt-2 not-italic">— Laurence Boyenval</footer>
+          </blockquote>
+
+          <p>Le spectacle revisite le conte du Petit Chaperon Rouge avec une perspective contemporaine. Contrairement à l'héroïne classique, ce personnage respecte les consignes parentales mais n'échappe pas à un prédateur. L'agresseur n'a pas de traits caractéristiques effrayants&nbsp;; c'est « Monsieur Tout le monde, le voisin que l'on trouvait gentil ». L'enfant doit « trouver en elle les ressources pour s'en sortir seule » sans intervention extérieure.</p>
+
+          <p>La scénographie utilise des panneaux ajourés permettant de jouer sur la lumière et les ombres. Le texte reste court car le spectacle est avant tout un spectacle dansé.</p>
+
+          <h3 class="font-heading text-xl text-wheat uppercase tracking-wider mt-8">Processus de création</h3>
+          <p>Six résidences ont structuré la création entre septembre 2022 et janvier 2023 dans diverses villes&nbsp;: Couches, Dijon, Langres, Saint-Marcel et Talant.</p>
+
+          <h3 class="font-heading text-xl text-wheat uppercase tracking-wider mt-8">Soutiens</h3>
+          <p>Production soutenue par la DRAC Bourgogne-Franche-Comté, la Région, le Département, les villes partenaires, l'ADAMI, et les compagnies collaboratrices.</p>
+        </div>
+        <aside class="space-y-4">
+          <div class="border border-white/20 p-6">
+            <h3 class="font-heading text-lg mb-4">Sur le plateau</h3>
+            <dl class="space-y-3 text-sm">
+              <div>
+                <dt class="text-white/50 uppercase tracking-wider text-xs">Le Loup</dt>
+                <dd>Simon Marmorat (MOMAR) — danseur hip-hop</dd>
+              </div>
+              <div>
+                <dt class="text-white/50 uppercase tracking-wider text-xs">Le Petit Bonnet Rouge</dt>
+                <dd>Liza Kanellaki — danseuse jazz</dd>
+              </div>
+              <div>
+                <dt class="text-white/50 uppercase tracking-wider text-xs">La Grand-Mère</dt>
+                <dd>Sylvain Marmorat — comédien</dd>
+              </div>
+            </dl>
+          </div>
+          <div class="border border-white/20 p-6">
+            <h3 class="font-heading text-lg mb-4">Équipe</h3>
+            <dl class="space-y-3 text-sm">
+              <div>
+                <dt class="text-white/50 uppercase tracking-wider text-xs">Mise en scène</dt>
+                <dd>Laurence Boyenval</dd>
+              </div>
+              <div>
+                <dt class="text-white/50 uppercase tracking-wider text-xs">Chorégraphie</dt>
+                <dd>Mehdi Diouri</dd>
+              </div>
+              <div>
+                <dt class="text-white/50 uppercase tracking-wider text-xs">Composition musicale</dt>
+                <dd>Stéphane Lavallée</dd>
+              </div>
+              <div>
+                <dt class="text-white/50 uppercase tracking-wider text-xs">Scénographie</dt>
+                <dd>Pierre Yanelli</dd>
+              </div>
+              <div>
+                <dt class="text-white/50 uppercase tracking-wider text-xs">Lumières</dt>
+                <dd>Léa Pierre</dd>
+              </div>
+              <div>
+                <dt class="text-white/50 uppercase tracking-wider text-xs">Costumes</dt>
+                <dd>Louisa Breysse</dd>
+              </div>
+            </dl>
+          </div>
+          <div class="border border-white/20 p-6">
+            <h3 class="font-heading text-lg mb-4">Technique</h3>
+            <dl class="space-y-3 text-sm">
+              <div>
+                <dt class="text-white/50 uppercase tracking-wider text-xs">Durée</dt>
+                <dd>45 minutes</dd>
+              </div>
+              <div>
+                <dt class="text-white/50 uppercase tracking-wider text-xs">Artistes</dt>
+                <dd>Deux danseurs et un comédien</dd>
+              </div>
+              <div>
+                <dt class="text-white/50 uppercase tracking-wider text-xs">Espace requis</dt>
+                <dd>12m &times; 8m minimum</dd>
+              </div>
+              <div>
+                <dt class="text-white/50 uppercase tracking-wider text-xs">Hauteur</dt>
+                <dd>4 mètres</dd>
+              </div>
+              <div>
+                <dt class="text-white/50 uppercase tracking-wider text-xs">Sol</dt>
+                <dd>Tapis de danse obligatoire</dd>
+              </div>
+            </dl>
+          </div>
+        </aside>
+      </div>
+
+      <div class="mt-12 flex gap-4">
+        <a href={url('/spectacles/le-petit-bonnet-rouge')} class="text-white/60 hover:text-accent uppercase text-sm tracking-wider font-bold transition-colors">&larr; Le Petit Bonnet Rouge</a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

@@ -1,0 +1,43 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro'
+import { url, asset } from '../../utils/paths'
+---
+
+<BaseLayout title="La Fille Bien Gardée — Représentations scolaires — Le Rocher des Doms" description="Photos des représentations scolaires de La Fille Bien Gardée à l'Ecrin de Talant." currentPage="/spectacles">
+
+  <section class="py-16 md:py-24">
+    <div class="max-w-3xl mx-auto px-4">
+      <p class="text-accent text-sm uppercase tracking-wider mb-4">La Fille Bien Gardée</p>
+      <h1 class="font-heading text-3xl md:text-4xl mb-2">Représentations scolaires à l'Ecrin, Talant</h1>
+      <p class="text-white/50 text-sm mb-8">25 et 27 mai 2021</p>
+
+      <div class="space-y-6 text-white/80 leading-relaxed">
+        <h2 class="font-heading text-2xl text-wheat">Distribution</h2>
+        <ul class="space-y-2">
+          <li><strong class="text-wheat">Adeline Moncaut</strong> — Marie, femme de chambre</li>
+          <li><strong class="text-wheat">Lison Goillot</strong> — La baronne de Flasquemont</li>
+          <li><strong class="text-wheat">Sylvain Marmorat</strong> — Saint-Germain, chasseur de la baronne</li>
+          <li><strong class="text-wheat">Lolita Franck</strong> — La petite Berthe</li>
+          <li><strong class="text-wheat">Loïc Galenski</strong> — Rocambole, carabinier</li>
+          <li><strong class="text-wheat">Evelyne Peudon</strong> — Violoncelliste</li>
+        </ul>
+
+        <h2 class="font-heading text-2xl text-wheat mt-8">Remerciements</h2>
+        <p>Merci à la ville de Talant qui a fait ce beau cadeau à tous les enfants des écoles primaires de Talant.</p>
+        <p>Merci à l'équipe de l'Ecrin pour leur professionnalisme et leur disponibilité.</p>
+        <p>Merci à Mayalen Gauthier pour l'article du spectacle paru dans le Bien Public.</p>
+        <p>Merci à Estelle Galenski pour la qualité de ses photographies.</p>
+        <p>Merci aux équipes logistique, artistique et technique pour cette heure de rigolade et de franche camaraderie.</p>
+      </div>
+
+      <div class="mt-8">
+        <p class="text-white/40 text-sm">Photos&nbsp;: Estelle Galenski</p>
+      </div>
+
+      <div class="mt-12 flex gap-4">
+        <a href={url('/archives')} class="text-white/60 hover:text-accent uppercase text-sm tracking-wider font-bold transition-colors">&larr; Archives</a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

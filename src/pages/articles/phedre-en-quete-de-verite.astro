@@ -1,0 +1,44 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro'
+import { url, asset } from '../../utils/paths'
+---
+
+<BaseLayout title="Phèdre en quête de vérité — Le Rocher des Doms" description="Le Rocher des Doms imagine une Phèdre post-mortem, en quête d'une explication sur cette fatalité." currentPage="/spectacles">
+
+  <section class="py-16 md:py-24">
+    <div class="max-w-3xl mx-auto px-4">
+      <p class="text-accent text-sm uppercase tracking-wider mb-4">Phèdre ~ Epilogue</p>
+      <h1 class="font-heading text-3xl md:text-4xl mb-2">Phèdre en quête de vérité</h1>
+      <p class="text-white/50 text-sm mb-8">Décembre 2018</p>
+
+      <div class="space-y-6 text-white/80 leading-relaxed">
+        <p class="text-lg italic text-wheat/90">Le Rocher des Doms imagine une Phèdre, post-mortem, en proie à ses souvenirs et ses émotions, en quête d'une explication sur cette fatalité afin de pouvoir trouver enfin le repos.</p>
+      </div>
+
+      <div class="mt-8">
+        <div class="border border-white/20 p-6 inline-block">
+          <h3 class="font-heading text-lg mb-4">Distribution</h3>
+          <dl class="space-y-3 text-sm">
+            <div>
+              <dt class="text-white/50 uppercase tracking-wider text-xs">Phèdre</dt>
+              <dd>Laurence Boyenval</dd>
+            </div>
+            <div>
+              <dt class="text-white/50 uppercase tracking-wider text-xs">Le Spectre</dt>
+              <dd>Sylvain Marmorat</dd>
+            </div>
+            <div>
+              <dt class="text-white/50 uppercase tracking-wider text-xs">Direction</dt>
+              <dd>Jacques Fornier &amp; Sylvain Marmorat</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+
+      <div class="mt-12 flex gap-4">
+        <a href={url('/archives')} class="text-white/60 hover:text-accent uppercase text-sm tracking-wider font-bold transition-colors">&larr; Archives</a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

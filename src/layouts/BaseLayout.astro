@@ -52,6 +52,9 @@ const {
 
   <Footer />
 
+  <script is:inline define:vars={{ siteBase: import.meta.env.BASE_URL.replace(/\/$/, '') }}>
+    window.__SITE_BASE = siteBase;
+  </script>
   <script>
     // Mobile menu toggle
     const hamburger = document.getElementById('hamburger')
@@ -79,9 +82,30 @@ const {
       { title: 'Archives', href: '/archives', keywords: 'archives répertoire créations louise michel fille bien gardée poil de carotte phèdre amante anglaise' },
       { title: 'Presse', href: '/presse', keywords: 'presse articles jhm journal haute-marne critiques' },
       { title: 'Contact', href: '/contact', keywords: 'contact email téléphone adresse formulaire' },
+      { title: 'Louise Michel — Article JHM Auberive', href: '/articles/louise-michel-jhm-auberive', keywords: 'louise michel auberive abbaye jhm spectacle' },
+      { title: 'Louise Michel — Dossier', href: '/articles/louise-michel-dossier', keywords: 'louise michel dossier présentation' },
+      { title: 'Louise Michel — Spectateurs', href: '/articles/louise-michel-spectateurs', keywords: 'louise michel spectateurs témoignages avis' },
+      { title: 'La Commune en quelques dates', href: '/articles/la-commune-en-quelques-dates', keywords: 'commune paris 1871 louise michel histoire dates' },
+      { title: 'Les Ecraignes de Louise Michel', href: '/articles/les-ecraignes-de-louise-michel', keywords: 'ecraignes louise michel symbole révolutionnaire chassigny' },
+      { title: 'La Fille Bien Gardée — Arts & Scènes', href: '/articles/la-fille-bien-gardee-arts-scenes', keywords: 'fille bien gardée tournée arts scènes côte or' },
+      { title: 'La Fille Bien Gardée — L\'Ecrin réussite', href: '/articles/la-fille-bien-gardee-ecrin-reussite', keywords: 'fille bien gardée ecrin talant réussite critique' },
+      { title: 'La Fille Bien Gardée — Répétition', href: '/articles/la-fille-bien-gardee-repetition', keywords: 'fille bien gardée répétition tonnerre labiche' },
+      { title: 'La Fille Bien Gardée — Scolaires', href: '/articles/la-fille-bien-gardee-representations-scolaires', keywords: 'fille bien gardée scolaires ecrin talant photos' },
+      { title: 'Phèdre en quête de vérité', href: '/articles/phedre-en-quete-de-verite', keywords: 'phèdre epilogue racine vérité post-mortem' },
+      { title: 'Phèdre — Une autre vision (JSL)', href: '/articles/phedre-autre-vision-jsl', keywords: 'phèdre epilogue autun jsl norbert estienne critique' },
+      { title: 'Les Derniers Devoirs — Dossier', href: '/articles/les-derniers-devoirs-dossier', keywords: 'derniers devoirs calaferte dossier' },
+      { title: 'Les Derniers Devoirs — Inventivité', href: '/articles/les-derniers-devoirs-inventivite', keywords: 'derniers devoirs calaferte inventivité critique' },
+      { title: 'Le Petit Bonnet Rouge — Présentation', href: '/articles/le-petit-bonnet-rouge-presentation', keywords: 'petit bonnet rouge présentation dossier distribution' },
+      { title: 'Le Petit Bonnet Rouge — Dijon', href: '/articles/le-petit-bonnet-rouge-dijon', keywords: 'petit bonnet rouge dijon feuillants' },
+      { title: 'Le Petit Bonnet Rouge — Teaser', href: '/articles/le-petit-bonnet-rouge-teaser', keywords: 'petit bonnet rouge teaser vidéo' },
+      { title: 'De belles représentations !', href: '/articles/le-petit-bonnet-rouge-belles-representations', keywords: 'petit bonnet rouge représentations avis spectateurs enfants' },
+      { title: 'Le Médecin Volant — Présentation', href: '/articles/le-medecin-volant-presentation', keywords: 'médecin volant molière présentation dossier yanelli' },
+      { title: 'Un petit manège de désirs', href: '/articles/le-medecin-volant-petit-manege', keywords: 'médecin volant molière bien public manège désirs yanelli interview' },
+      { title: 'Le Médecin Volant — Critique', href: '/articles/le-medecin-volant-critique', keywords: 'médecin volant molière critique henri dunant dijon' },
+      { title: 'Le Médecin Volant — Extraits vidéo', href: '/articles/le-medecin-volant-extraits-video', keywords: 'médecin volant molière vidéo salives' },
     ]
 
-    const base = document.querySelector('meta[property="og:url"]')?.getAttribute('content')?.replace(/\/[^/]*$/, '') || ''
+    const base = (window as any).__SITE_BASE || ''
     const searchToggle = document.getElementById('search-toggle')
     const searchOverlay = document.getElementById('search-overlay')
     const searchInput = document.getElementById('search-input') as HTMLInputElement
@@ -116,7 +140,7 @@ const {
         p.title.toLowerCase().includes(q) || p.keywords.includes(q)
       )
       searchResults.innerHTML = matches.length
-        ? matches.map(p => `<a href="${p.href}" class="block border border-white/10 p-4 hover:border-accent transition-colors"><span class="font-heading text-lg text-wheat">${p.title}</span></a>`).join('')
+        ? matches.map(p => `<a href="${base}${p.href}" class="block border border-white/10 p-4 hover:border-accent transition-colors"><span class="font-heading text-lg text-wheat">${p.title}</span></a>`).join('')
         : '<p class="text-white/50">Aucun résultat.</p>'
     })
 

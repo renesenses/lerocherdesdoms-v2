@@ -1,0 +1,26 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro'
+import { url, asset } from '../../utils/paths'
+---
+
+<BaseLayout title="Une pièce pleine d'inventivité — Le Rocher des Doms" description="Critique des Derniers Devoirs de Louis Calaferte par la Compagnie Le Rocher des Doms." currentPage="/spectacles">
+
+  <section class="py-16 md:py-24">
+    <div class="max-w-3xl mx-auto px-4">
+      <p class="text-accent text-sm uppercase tracking-wider mb-4">Les Derniers Devoirs — Louis Calaferte</p>
+      <h1 class="font-heading text-3xl md:text-4xl mb-2">Une pièce pleine d'inventivité</h1>
+      <p class="text-white/50 text-sm mb-8">Décembre 2018</p>
+
+      <div class="space-y-6 text-white/80 leading-relaxed">
+        <p>Les personnages interprétés par Laurence Boyenval, Bénédicte Ressot et Sylvain Marmorat lui-même sont <em>« criants de vérité »</em>.</p>
+
+        <p>La pièce, renvoyant chaque spectateur à son propre vécu dans pareil cas, offre <em>« un pur bonheur de situations loufoques et de bons mots »</em>, qualifiée de <em>« vrai régal à voir et revoir »</em>.</p>
+      </div>
+
+      <div class="mt-12 flex gap-4">
+        <a href={url('/archives')} class="text-white/60 hover:text-accent uppercase text-sm tracking-wider font-bold transition-colors">&larr; Archives</a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

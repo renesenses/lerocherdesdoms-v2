@@ -1,0 +1,30 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro'
+import { url, asset } from '../../utils/paths'
+---
+
+<BaseLayout title="Louise Michel à l'Abbaye d'Auberive — Le Rocher des Doms" description="Article JHM sur la représentation de Louise Michel Louise Maboul à l'abbaye d'Auberive." currentPage="/spectacles">
+
+  <section class="py-16 md:py-24">
+    <div class="max-w-3xl mx-auto px-4">
+      <p class="text-accent text-sm uppercase tracking-wider mb-4">Louise Michel — Louise Maboul</p>
+      <h1 class="font-heading text-3xl md:text-4xl mb-2">Louise Michel à l'Abbaye d'Auberive</h1>
+      <p class="text-white/50 text-sm mb-8">Article JHM — 1er septembre 2023</p>
+
+      <div class="space-y-6 text-white/80 leading-relaxed">
+        <p>L'abbaye d'Auberive et l'association AC2A ont proposé une pièce théâtrale rendant hommage à Louise Michel, figure emblématique de la Commune et du féminisme, le samedi 26 août.</p>
+
+        <p>Sylvain Marmorat et Laurence Boyenval ont présenté « Louise Michel, Louise Maboul » pour cette dernière soirée culturelle à l'abbaye.</p>
+
+        <p>Cent quarante spectateurs ont assisté à ce spectacle mettant en lumière la générosité, les engagements et la fidélité de Louise Michel. À partir de ses mémoires, lettres à Victor Hugo et autres écrits, la compagnie a retracé son parcours de sa naissance jusqu'à son arrivée en Nouvelle-Calédonie, traversant son enfance en Haute-Marne, sa carrière d'institutrice, son rôle durant la Commune, son emprisonnement à Auberive et sa déportation.</p>
+
+        <p>La représentation a duré plus d'une heure et s'est conclue sous des applaudissements chaleureux.</p>
+      </div>
+
+      <div class="mt-12 flex gap-4">
+        <a href={url('/archives')} class="text-white/60 hover:text-accent uppercase text-sm tracking-wider font-bold transition-colors">&larr; Archives</a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

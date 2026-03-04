@@ -1,0 +1,46 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro'
+import { url, asset } from '../../utils/paths'
+---
+
+<BaseLayout title="Louise Michel — Ce que les spectateurs en disent — Le Rocher des Doms" description="Témoignages des spectateurs sur le spectacle Louise Michel Louise Maboul." currentPage="/spectacles">
+
+  <section class="py-16 md:py-24">
+    <div class="max-w-3xl mx-auto px-4">
+      <p class="text-accent text-sm uppercase tracking-wider mb-4">Louise Michel — Louise Maboul</p>
+      <h1 class="font-heading text-3xl md:text-4xl mb-2">Ce que les spectateurs en disent</h1>
+      <p class="text-white/50 text-sm mb-8">Avril 2022</p>
+
+      <div class="space-y-6 text-white/80 leading-relaxed">
+        <p>Le spectacle « Louise Michel » est une création de la Compagnie Le Rocher des Doms, mettant en scène la vie de Louise Michel à travers ses propres écrits.</p>
+
+        <h2 class="font-heading text-2xl text-wheat mt-8">Témoignages</h2>
+
+        <p>Les spectateurs décrivent le spectacle comme « magnifique » et « captivant ». Ils louent la mise en scène avec deux espaces et deux époques, l'intérêt historique du sujet, et la qualité des éléments techniques — musique et lumière.</p>
+
+        <p>Le jeu des comédiens est unanimement salué, avec Laurence Boyenval dans le rôle de Louise Michel et Sylvain Marmorat en narrateur.</p>
+      </div>
+
+      <div class="mt-8">
+        <div class="border border-white/20 p-6 inline-block">
+          <h3 class="font-heading text-lg mb-4">Distribution</h3>
+          <dl class="space-y-3 text-sm">
+            <div>
+              <dt class="text-white/50 uppercase tracking-wider text-xs">Louise Michel</dt>
+              <dd>Laurence Boyenval</dd>
+            </div>
+            <div>
+              <dt class="text-white/50 uppercase tracking-wider text-xs">Narrateur</dt>
+              <dd>Sylvain Marmorat</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+
+      <div class="mt-12 flex gap-4">
+        <a href={url('/archives')} class="text-white/60 hover:text-accent uppercase text-sm tracking-wider font-bold transition-colors">&larr; Archives</a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

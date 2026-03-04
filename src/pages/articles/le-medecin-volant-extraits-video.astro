@@ -1,0 +1,24 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro'
+import { url, asset } from '../../utils/paths'
+---
+
+<BaseLayout title="Extraits Vidéo du Médecin Volant — Le Rocher des Doms" description="Extraits vidéo du Médecin Volant filmé à l'Abreuvoir à Salives." currentPage="/spectacles">
+
+  <section class="py-16 md:py-24">
+    <div class="max-w-3xl mx-auto px-4">
+      <p class="text-accent text-sm uppercase tracking-wider mb-4">Le Médecin Volant — Molière</p>
+      <h1 class="font-heading text-3xl md:text-4xl mb-2">Extraits Vidéo du Médecin Volant</h1>
+      <p class="text-white/50 text-sm mb-8">Juin 2013</p>
+
+      <div class="space-y-6 text-white/80 leading-relaxed">
+        <p>Petit montage du Médecin Volant filmé lors de la représentation à l'Abreuvoir à Salives le 31 mai 2013.</p>
+      </div>
+
+      <div class="mt-12 flex gap-4">
+        <a href={url('/spectacles/le-medecin-volant')} class="text-white/60 hover:text-accent uppercase text-sm tracking-wider font-bold transition-colors">&larr; Le Médecin Volant</a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

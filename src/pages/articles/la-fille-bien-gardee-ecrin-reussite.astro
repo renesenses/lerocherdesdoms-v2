@@ -1,0 +1,36 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro'
+import { url, asset } from '../../utils/paths'
+---
+
+<BaseLayout title="La Fille Bien Gardée à l'Ecrin : une franche réussite — Le Rocher des Doms" description="Critique de La Fille Bien Gardée à l'Ecrin de Talant." currentPage="/spectacles">
+
+  <section class="py-16 md:py-24">
+    <div class="max-w-3xl mx-auto px-4">
+      <p class="text-accent text-sm uppercase tracking-wider mb-4">La Fille Bien Gardée</p>
+      <h1 class="font-heading text-3xl md:text-4xl mb-2">La Fille Bien Gardée d'Eugène Labiche à l'Ecrin&nbsp;: une franche réussite</h1>
+      <p class="text-white/50 text-sm mb-8">Par Clément Privolt — Mai 2021</p>
+
+      <div class="space-y-6 text-white/80 leading-relaxed">
+        <p>Au programme&nbsp;: quatre représentations au théâtre de l'Ecrin, à destination de 600 élèves, mardi 25 et jeudi 27 mai.</p>
+
+        <p class="text-lg italic text-wheat/90">« Comédiens, Public, Décor, tout y est ! Le spectacle peut donc commencer. »</p>
+
+        <p>La petite Berthe (Lolita Huguenin), Saint-Germain (Sylvain Marmorat), Marie (Adeline Moncaut), Rocambole carabinier (Loïc Galenski), et la baronne de Flasquemont (Lison Goillot) donnent vie à cette farce de Labiche avec une énergie communicative.</p>
+
+        <p>La prestation d'Evelyne Peudon au violoncelle accompagne admirablement l'ensemble. Louisa Breysse aux costumes et Laurence Boyenval à la direction complètent une équipe artistique soudée.</p>
+
+        <p class="text-lg italic text-wheat/90">« On se rend compte qu'il est possible de pouvoir marier sensibilité, comique de situation et portée philosophique. »</p>
+      </div>
+
+      <div class="mt-8">
+        <p class="text-white/40 text-sm">Crédit photo&nbsp;: Estelle Galenski</p>
+      </div>
+
+      <div class="mt-12 flex gap-4">
+        <a href={url('/archives')} class="text-white/60 hover:text-accent uppercase text-sm tracking-wider font-bold transition-colors">&larr; Archives</a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>
